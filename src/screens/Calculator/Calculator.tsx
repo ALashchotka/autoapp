@@ -30,11 +30,12 @@ const useStyles = ({ colors }: { colors: any }) =>
     itemsContainer: {
       flexDirection: "row",
       flexWrap: "wrap",
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       marginHorizontal: 16,
     },
     itemContainer: {
-      margin: 10,
+      marginHorizontal: 8,
+      marginVertical: 16,
       backgroundColor: colors.itemBackground,
       borderRadius: 10,
       paddingVertical: 8,
@@ -52,7 +53,8 @@ const useStyles = ({ colors }: { colors: any }) =>
     textInput: {
       backgroundColor: colors.itemBackground,
       color: colors.text,
-      margin: 16,
+      marginVertical: 16,
+      marginHorizontal: 24,
       borderRadius: 10,
       paddingVertical: 8,
       paddingHorizontal: 16,

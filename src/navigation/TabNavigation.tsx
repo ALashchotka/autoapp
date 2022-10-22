@@ -3,6 +3,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 
 import { useTheme } from "../hooks/useTheme";
 import { Calculator } from "../screens/Calculator/Calculator";
+import { Filter } from "../screens/Filter/Filter";
 
 const Tab = createBottomTabNavigator();
 
@@ -35,6 +36,15 @@ export function TabNavigation() {
               color={color}
               size={size}
             />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Filter"
+        component={Filter}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="filter" color={color} size={size} />
           ),
         }}
       />
