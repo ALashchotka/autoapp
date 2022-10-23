@@ -46,7 +46,7 @@ const formatModel = (brand: string, model: string) => {
 
 export function useLink() {
   const [link, setLink] = useState("");
-  const [carData, setCarData] = useState(null);
+  const [carData, setCarData] = useState<object | null>(null);
 
   const total = useCalculator(carData || {});
 

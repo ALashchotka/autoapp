@@ -1,7 +1,6 @@
 import React from "react";
 
 import {
-  ActivityIndicator,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -14,6 +13,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import WebView from "react-native-webview";
 
 import { useTheme } from "../../hooks/useTheme";
+import { Card } from "./Card/Card";
 import { useLink } from "./useLink";
 
 const useStyles = ({ colors }: { colors: any }) =>
@@ -104,6 +104,18 @@ export function Filter({ navigation }: { navigation: any }) {
     navigation.navigate("Cars", carData);
   };
 
+  const onBodyRemove = () => {
+    setCarData((prevState: any) => ({ ...prevState, body: null }));
+  };
+
+  const onFuelRemove = () => {
+    setCarData((prevState: any) => ({ ...prevState, fuel: null }));
+  };
+
+  const onVolumeRemove = () => {
+    setCarData((prevState: any) => ({ ...prevState, volume: null }));
+  };
+
   const onWebViewMessage = ({
     nativeEvent: { data },
   }: {
@@ -157,44 +169,32 @@ export function Filter({ navigation }: { navigation: any }) {
         {!!carData && (
           <>
             <View style={styles.dataContainer}>
-              <View style={styles.dataItemContainer}>
-                <Text style={styles.title}>Марка</Text>
-                <Text style={styles.value}>{carData.brand}</Text>
-              </View>
-              <View style={styles.dataItemContainer}>
-                <Text style={styles.title}>Модель</Text>
-                <Text style={styles.value}>{carData.model}</Text>
-              </View>
-              <View style={styles.dataItemContainer}>
-                <Text style={styles.title}>Тип топлива</Text>
-                <Text style={styles.value}>{carData.fuel}</Text>
-              </View>
-              <View style={styles.dataItemContainer}>
-                <Text style={styles.title}>Объём</Text>
-                <Text style={styles.value}>{carData.volume}</Text>
-              </View>
-              <View style={styles.dataItemContainer}>
-                <Text style={styles.title}>Год выпуска</Text>
-                <Text style={styles.value}>{carData.year}</Text>
-              </View>
-              <View style={styles.dataItemContainer}>
-                <Text style={styles.title}>Кузов</Text>
-                <Text style={styles.value}>{carData.body}</Text>
-              </View>
-              <View style={styles.dataItemContainer}>
-                <Text style={styles.title}>Цена</Text>
-                {!!carData.price && (
-                  <Text style={styles.value}>{carData.price}</Text>
-                )}
-                {!carData.price && <ActivityIndicator style={styles.value} />}
-              </View>
-              <View style={styles.dataItemContainer}>
-                <Text style={styles.title}>Итого</Text>
-                {!!carData.total && (
-                  <Text style={styles.value}>{carData.total}</Text>
-                )}
-                {!carData.total && <ActivityIndicator style={styles.value} />}
-              </View>
+              <Card title="Марка" value={carData.brand} />
+              <Card title="Модель" value={carData.model} />
+              {!!carData.fuel && (
+                <Card
+                  onRemove={onFuelRemove}
+                  title="Тип топлива"
+                  value={carData.fuel}
+                />
+              )}
+              {!!carData.volume && (
+                <Card
+                  onRemove={onVolumeRemove}
+                  title="Объём"
+                  value={carData.volume}
+                />
+              )}
+              <Card title="Год выпуска" value={carData.year} />
+              {!!carData.body && (
+                <Card
+                  onRemove={onBodyRemove}
+                  title="Кузов"
+                  value={carData.body}
+                />
+              )}
+              <Card title="Цена" value={carData.price} />
+              <Card title="Итого" value={carData.total} />
             </View>
 
             <TouchableOpacity

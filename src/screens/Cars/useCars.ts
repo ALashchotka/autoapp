@@ -84,15 +84,24 @@ export function useCars(carData: any) {
           modelId: carData.brand + formatModel(carData.model),
           issueYearFrom: debouncedSettings.yearFrom,
           issueYearTo: debouncedSettings.yearTo,
-          capacityFrom: (carData.volume / 1000).toFixed(1),
-          capacityTo: (carData.volume / 1000).toFixed(1),
-          engines: [FUEL[carData.fuel]],
-          bodyTypes: [BODY[carData.body]],
           period: 7,
           deleted: true,
           sorting: 2,
           page: 0,
         };
+
+        if (carData.volume) {
+          body.capacityFrom = (carData.volume / 1000).toFixed(1);
+          body.capacityTo = (carData.volume / 1000).toFixed(1);
+        }
+
+        if (carData.fuel) {
+          body.engines = [FUEL[carData.fuel]];
+        }
+
+        if (carData.body) {
+          body.bodyTypes = [BODY[carData.body]];
+        }
 
         const response = await axios({
           method: "post",
