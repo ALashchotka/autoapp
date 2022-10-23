@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import qs from "qs";
 
-function capitalizeFirstLetter(string: string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+function formatModel(string: string) {
+  const newString = string.split("/").join("Slash");
+
+  return newString.charAt(0).toUpperCase() + newString.slice(1);
 }
 
 const FUEL = {
@@ -52,16 +54,18 @@ const BODY = {
 export function useCars(carData: any) {
   const [cars, setCars] = useState<object[] | null>(null);
 
+  const priceDiff = cars?.length ? cars[0].priceUSD - carData.total : 0;
+
   useEffect(() => {
     if (carData) {
       const sendRequest = async () => {
         const body = {
           brand: carData.brand,
-          modelId: carData.brand + capitalizeFirstLetter(carData.model),
-          issueYearFrom: carData.year,
-          issueYearTo: carData.year,
-          capacityFrom: carData.volume,
-          capacityTo: carData.volume,
+          modelId: carData.brand + formatModel(carData.model),
+          issueYearFrom: carData.year - 1,
+          issueYearTo: carData.year + 1,
+          capacityFrom: (carData.volume / 1000).toFixed(1),
+          capacityTo: (carData.volume / 1000).toFixed(1),
           engines: [FUEL[carData.fuel]],
           bodyTypes: [BODY[carData.body]],
           period: 7,
@@ -86,5 +90,5 @@ export function useCars(carData: any) {
     }
   }, [carData]);
 
-  return { cars };
+  return { cars, priceDiff };
 }

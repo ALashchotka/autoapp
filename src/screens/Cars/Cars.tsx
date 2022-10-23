@@ -28,6 +28,8 @@ const useStyles = ({ colors }: { colors: any }) =>
     title: {
       fontSize: 18,
       fontWeight: "500",
+      textAlign: "center",
+      margin: 8,
     },
     emptyContainer: {
       flex: 1,
@@ -40,7 +42,7 @@ export function Cars({ route }: { route: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const { cars } = useCars(route.params);
+  const { cars, priceDiff } = useCars(route.params);
 
   const keyExtractor = (item: any) => `car_${item.id}`;
 
@@ -66,6 +68,13 @@ export function Cars({ route }: { route: any }) {
               }
             </Text>
           </View>
+
+          <Text style={styles.title}>
+            Зазор:&nbsp;
+            <Text style={{ color: priceDiff > 0 ? "green" : "red" }}>
+              {priceDiff}
+            </Text>
+          </Text>
 
           <FlatList
             keyExtractor={keyExtractor}

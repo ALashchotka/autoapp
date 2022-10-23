@@ -1,33 +1,87 @@
 import { useEffect, useState } from "react";
 
+import { Keyboard } from "react-native";
+
+import { useCalculator } from "../../hooks/useCalculator";
+
+const formatModel = (brand: string, model: string) => {
+  if (brand === "bmw") {
+    switch (model[0]) {
+      case "1":
+        return "1Series";
+      case "2":
+        return "2Series";
+      case "3":
+        return "3Series";
+      case "4":
+        return "4Series";
+      case "5":
+        return "5Series";
+      case "6":
+        return "6Series";
+      case "7":
+        return "7Series";
+      case "8":
+        return "8Series";
+    }
+  }
+
+  if (brand === "opel") {
+    switch (model) {
+      case "zafira":
+        return "Zafira/ZafiraOPC";
+    }
+  }
+
+  return model;
+};
+
 export function useLink() {
   const [link, setLink] = useState("");
   const [carData, setCarData] = useState(null);
 
+  const total = useCalculator(carData || {});
+
   useEffect(() => {
     if (link.includes("autoplius") && link.includes(".html")) {
-      let splittedLink: string | string[] = link.split("/");
+      Keyboard.dismiss();
+
+      let splittedLink: string | string[] = link.split(".html")[0].split("/");
       splittedLink = splittedLink[splittedLink.length - 1]
         .split(".")[0]
         .split("-");
 
       const fuel = splittedLink[splittedLink.length - 2];
-      const year = splittedLink[splittedLink.length - 3];
+      const year = parseInt(splittedLink[splittedLink.length - 3], 10);
       const body = splittedLink[splittedLink.length - 4];
       const volume =
-        splittedLink[splittedLink.length - 7] +
-        "." +
-        splittedLink[splittedLink.length - 6];
+        parseFloat(
+          splittedLink[splittedLink.length - 7] +
+            "." +
+            splittedLink[splittedLink.length - 6]
+        ) * 1000;
       const brand = splittedLink[0];
-      const model = splittedLink[1];
+      const model = formatModel(brand, splittedLink[1]);
 
       setCarData({ fuel, year, body, volume, brand, model });
     }
   }, [link]);
 
+  useEffect(() => {
+    if (!link) {
+      setCarData(null);
+    }
+  }, [link]);
+
   return {
-    carData,
+    carData: carData
+      ? {
+          ...carData,
+          total,
+        }
+      : carData,
     link,
+    setCarData,
     setLink,
   };
 }

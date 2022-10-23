@@ -1,6 +1,7 @@
 import React from "react";
 
 import {
+  ActivityIndicator,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -10,6 +11,7 @@ import {
   View,
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import WebView from "react-native-webview";
 
 import { useTheme } from "../../hooks/useTheme";
 import { useLink } from "./useLink";
@@ -20,6 +22,7 @@ const useStyles = ({ colors }: { colors: any }) =>
       flex: 1,
       backgroundColor: colors.screenBackground,
     },
+
     title: {
       marginHorizontal: 24,
       marginTop: 16,
@@ -35,6 +38,7 @@ const useStyles = ({ colors }: { colors: any }) =>
       fontWeight: "400",
       color: colors.text,
     },
+
     textInputContainer: {
       justifyContent: "center",
     },
@@ -50,6 +54,19 @@ const useStyles = ({ colors }: { colors: any }) =>
     textInputClearButton: {
       position: "absolute",
       right: 32,
+    },
+
+    dataContainer: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+      marginHorizontal: 24,
+    },
+    dataItemContainer: {
+      backgroundColor: colors.selectableItemBackground,
+      borderRadius: 10,
+      width: "45%",
+      marginVertical: 8,
     },
 
     button: {
@@ -68,19 +85,48 @@ const useStyles = ({ colors }: { colors: any }) =>
     },
   });
 
+const INJECTED_JAVASCRIPT = `(function() {
+  const element = document.getElementsByClassName('export-price-value')[0]
+    || document.getElementsByClassName('price-value')[0]
+    || document.getElementsByClassName('price')[0]
+
+  const price = element.innerText.split(' ').join('').slice(0, -1)
+
+  window.ReactNativeWebView.postMessage(price);
+})();`;
+
 export function Filter({ navigation }: { navigation: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const { carData, link, setLink } = useLink();
+  const { carData, link, setCarData, setLink } = useLink();
 
   const openCarsList = () => {
     navigation.navigate("Cars", carData);
   };
 
+  const onWebViewMessage = ({
+    nativeEvent: { data },
+  }: {
+    nativeEvent: { data: string };
+  }) =>
+    setCarData((prevState) => ({
+      ...(prevState || {}),
+      price: parseInt(data, 10),
+    }));
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
+        {!!link && !carData?.price && (
+          <WebView
+            style={{ height: 0, width: 0 }}
+            source={{ uri: link }}
+            injectedJavaScript={INJECTED_JAVASCRIPT}
+            onMessage={onWebViewMessage}
+          />
+        )}
+
         <Text style={styles.title}>Ссылка autoplius:</Text>
 
         <View style={styles.textInputContainer}>
@@ -111,18 +157,46 @@ export function Filter({ navigation }: { navigation: any }) {
 
         {!!carData && (
           <>
-            <Text style={styles.title}>Марка</Text>
-            <Text style={styles.value}>{carData.brand}</Text>
-            <Text style={styles.title}>Модель</Text>
-            <Text style={styles.value}>{carData.model}</Text>
-            <Text style={styles.title}>Тип топлива</Text>
-            <Text style={styles.value}>{carData.fuel}</Text>
-            <Text style={styles.title}>Объём</Text>
-            <Text style={styles.value}>{carData.volume}</Text>
-            <Text style={styles.title}>Год выпуска</Text>
-            <Text style={styles.value}>{carData.year}</Text>
-            <Text style={styles.title}>Кузов</Text>
-            <Text style={styles.value}>{carData.body}</Text>
+            <View style={styles.dataContainer}>
+              <View style={styles.dataItemContainer}>
+                <Text style={styles.title}>Марка</Text>
+                <Text style={styles.value}>{carData.brand}</Text>
+              </View>
+              <View style={styles.dataItemContainer}>
+                <Text style={styles.title}>Модель</Text>
+                <Text style={styles.value}>{carData.model}</Text>
+              </View>
+              <View style={styles.dataItemContainer}>
+                <Text style={styles.title}>Тип топлива</Text>
+                <Text style={styles.value}>{carData.fuel}</Text>
+              </View>
+              <View style={styles.dataItemContainer}>
+                <Text style={styles.title}>Объём</Text>
+                <Text style={styles.value}>{carData.volume}</Text>
+              </View>
+              <View style={styles.dataItemContainer}>
+                <Text style={styles.title}>Год выпуска</Text>
+                <Text style={styles.value}>{carData.year}</Text>
+              </View>
+              <View style={styles.dataItemContainer}>
+                <Text style={styles.title}>Кузов</Text>
+                <Text style={styles.value}>{carData.body}</Text>
+              </View>
+              <View style={styles.dataItemContainer}>
+                <Text style={styles.title}>Цена</Text>
+                {!!carData.price && (
+                  <Text style={styles.value}>{carData.price}</Text>
+                )}
+                {!carData.price && <ActivityIndicator style={styles.value} />}
+              </View>
+              <View style={styles.dataItemContainer}>
+                <Text style={styles.title}>Итого</Text>
+                {!!carData.total && (
+                  <Text style={styles.value}>{carData.total}</Text>
+                )}
+                {!carData.total && <ActivityIndicator style={styles.value} />}
+              </View>
+            </View>
 
             <TouchableOpacity
               activeOpacity={0.5}
