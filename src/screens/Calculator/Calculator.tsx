@@ -10,9 +10,16 @@ import {
   View,
 } from "react-native";
 
+import { useCalculator } from "../../hooks/useCalculator";
 import { useTheme } from "../../hooks/useTheme";
-import { ADDITIONAL_COSTS, DATES, UNCLE_PRICE } from "./constants";
-import { useCalculator } from "./useCalculator";
+import {
+  ADDITIONAL_COSTS,
+  ADDITIONAL_COSTS_DEFAULT,
+  DATES,
+  DATES_DEFAULT,
+  UNCLE_PRICE,
+  UNCLE_PRICE_DEFAULT,
+} from "./constants";
 
 const useStyles = ({ colors }: { colors: any }) =>
   StyleSheet.create({
@@ -66,17 +73,17 @@ export function Calculator({ navigation }: { navigation: any }) {
   const styles = useStyles({ colors });
 
   const [data, setData] = useState({
-    additionalCosts: ADDITIONAL_COSTS[1],
-    date: DATES[2],
+    additionalCosts: ADDITIONAL_COSTS_DEFAULT,
+    year: DATES_DEFAULT.value,
     price: "",
-    unclePrice: UNCLE_PRICE[1],
+    unclePrice: UNCLE_PRICE_DEFAULT,
     volume: "",
   });
 
   const total = useCalculator(data);
 
   const onDatePress = (value: any) =>
-    setData((prevState) => ({ ...prevState, date: value }));
+    setData((prevState) => ({ ...prevState, year: value }));
 
   const onVolumeChange = (value: any) =>
     setData((prevState) => ({ ...prevState, volume: value }));
@@ -119,23 +126,23 @@ export function Calculator({ navigation }: { navigation: any }) {
 
         <Text style={styles.title}>Дата выпуска:</Text>
         <View style={styles.itemsContainer}>
-          {DATES.map((date) => (
+          {DATES.map(({ title, value }) => (
             <TouchableOpacity
               activeOpacity={0.5}
               style={[
                 styles.itemContainer,
-                data.date === date && styles.itemSelected,
+                data.year === value && styles.itemSelected,
               ]}
-              key={`date_${date}`}
-              onPress={() => onDatePress(date)}
+              key={`date_${value}`}
+              onPress={() => onDatePress(value)}
             >
               <Text
                 style={[
                   styles.itemText,
-                  data.date === date && styles.itemTextSelected,
+                  data.year === value && styles.itemTextSelected,
                 ]}
               >
-                {date}
+                {title}
               </Text>
             </TouchableOpacity>
           ))}
