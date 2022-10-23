@@ -1,6 +1,13 @@
 import React from "react";
 
-import { StyleSheet, Text, TextInput as TextInputRN, View } from "react-native";
+import {
+  StyleProp,
+  StyleSheet,
+  Text,
+  TextInput as TextInputRN,
+  View,
+  ViewStyle,
+} from "react-native";
 
 import { useTheme } from "../../hooks/useTheme";
 
@@ -25,7 +32,7 @@ const useStyles = ({ colors }: { colors: any }) =>
   });
 
 interface TextInputProps {
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   title?: string;
 }
 
