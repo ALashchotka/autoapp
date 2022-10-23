@@ -10,8 +10,10 @@ import {
   View,
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import WebView from "react-native-webview";
 
 import { useTheme } from "../../hooks/useTheme";
+import { Card } from "./Card/Card";
 import { useLink } from "./useLink";
 
 const useStyles = ({ colors }: { colors: any }) =>
@@ -20,6 +22,7 @@ const useStyles = ({ colors }: { colors: any }) =>
       flex: 1,
       backgroundColor: colors.screenBackground,
     },
+
     title: {
       marginHorizontal: 24,
       marginTop: 16,
@@ -35,6 +38,7 @@ const useStyles = ({ colors }: { colors: any }) =>
       fontWeight: "400",
       color: colors.text,
     },
+
     textInputContainer: {
       justifyContent: "center",
     },
@@ -50,6 +54,19 @@ const useStyles = ({ colors }: { colors: any }) =>
     textInputClearButton: {
       position: "absolute",
       right: 32,
+    },
+
+    dataContainer: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "space-between",
+      marginHorizontal: 24,
+    },
+    dataItemContainer: {
+      backgroundColor: colors.selectableItemBackground,
+      borderRadius: 10,
+      width: "45%",
+      marginVertical: 8,
     },
 
     button: {
@@ -68,19 +85,59 @@ const useStyles = ({ colors }: { colors: any }) =>
     },
   });
 
+const INJECTED_JAVASCRIPT = `(function() {
+  const element = document.getElementsByClassName('export-price-value')[0]
+    || document.getElementsByClassName('price-value')[0]
+
+  const price = element.innerText.split(' ').join('').slice(0, -1)
+
+  window.ReactNativeWebView.postMessage(price);
+})();`;
+
 export function Filter({ navigation }: { navigation: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const { carData, link, setLink } = useLink();
+  const { carData, link, setCarData, onLinkChange } = useLink();
 
   const openCarsList = () => {
     navigation.navigate("Cars", carData);
   };
 
+  const onBodyRemove = () => {
+    setCarData((prevState: any) => ({ ...prevState, body: null }));
+  };
+
+  const onFuelRemove = () => {
+    setCarData((prevState: any) => ({ ...prevState, fuel: null }));
+  };
+
+  const onVolumeRemove = () => {
+    setCarData((prevState: any) => ({ ...prevState, volume: null }));
+  };
+
+  const onWebViewMessage = ({
+    nativeEvent: { data },
+  }: {
+    nativeEvent: { data: string };
+  }) =>
+    setCarData((prevState) => ({
+      ...(prevState || {}),
+      price: parseInt(data, 10),
+    }));
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
+        {!!link && !carData?.price && (
+          <WebView
+            style={{ height: 0, width: 0 }}
+            source={{ uri: link }}
+            injectedJavaScript={INJECTED_JAVASCRIPT}
+            onMessage={onWebViewMessage}
+          />
+        )}
+
         <Text style={styles.title}>Ссылка autoplius:</Text>
 
         <View style={styles.textInputContainer}>
@@ -88,12 +145,12 @@ export function Filter({ navigation }: { navigation: any }) {
             style={styles.textInput}
             placeholder="Ссылка"
             placeholderTextColor={colors.textInputPlaceholder}
-            onChangeText={setLink}
+            onChangeText={onLinkChange}
             value={link}
           />
           <TouchableOpacity
             style={styles.textInputClearButton}
-            onPress={() => setLink("")}
+            onPress={() => onLinkChange("")}
             hitSlop={{
               top: 10,
               right: 10,
@@ -111,18 +168,34 @@ export function Filter({ navigation }: { navigation: any }) {
 
         {!!carData && (
           <>
-            <Text style={styles.title}>Марка</Text>
-            <Text style={styles.value}>{carData.brand}</Text>
-            <Text style={styles.title}>Модель</Text>
-            <Text style={styles.value}>{carData.model}</Text>
-            <Text style={styles.title}>Тип топлива</Text>
-            <Text style={styles.value}>{carData.fuel}</Text>
-            <Text style={styles.title}>Объём</Text>
-            <Text style={styles.value}>{carData.volume}</Text>
-            <Text style={styles.title}>Год выпуска</Text>
-            <Text style={styles.value}>{carData.year}</Text>
-            <Text style={styles.title}>Кузов</Text>
-            <Text style={styles.value}>{carData.body}</Text>
+            <View style={styles.dataContainer}>
+              <Card title="Марка" value={carData.brand} />
+              <Card title="Модель" value={carData.model} />
+              {!!carData.fuel && (
+                <Card
+                  onRemove={onFuelRemove}
+                  title="Тип топлива"
+                  value={carData.fuel}
+                />
+              )}
+              {!!carData.volume && (
+                <Card
+                  onRemove={onVolumeRemove}
+                  title="Объём"
+                  value={carData.volume}
+                />
+              )}
+              <Card title="Год выпуска" value={carData.year} />
+              {!!carData.body && (
+                <Card
+                  onRemove={onBodyRemove}
+                  title="Кузов"
+                  value={carData.body}
+                />
+              )}
+              <Card title="Цена" value={carData.price} />
+              <Card title="Итого" value={carData.total} />
+            </View>
 
             <TouchableOpacity
               activeOpacity={0.5}
@@ -133,6 +206,25 @@ export function Filter({ navigation }: { navigation: any }) {
                 Просмотреть объявления за последний месяц
               </Text>
             </TouchableOpacity>
+          </>
+        )}
+
+        {!carData && (
+          <>
+            <Text style={styles.title}>Не работает с:</Text>
+            <Text style={[styles.value, { marginBottom: 0 }]}>
+              - Volvo, Mercedes
+            </Text>
+            <Text style={[styles.value, { marginBottom: 0 }]}>
+              - двойными марками и моделями (Alfa Romeo, Passat CC, IS 250, CX-7
+              и тд.)
+            </Text>
+            <Text style={[styles.value, { marginBottom: 0 }]}>
+              - купе, кабриолет, лифтбэк, микроавтобус
+            </Text>
+            <Text style={[styles.value, { marginBottom: 0 }]}>
+              - топливом, кроме бензина и дизеля (бензин/газ, электро и тд.)
+            </Text>
           </>
         )}
       </ScrollView>

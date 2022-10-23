@@ -3,8 +3,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import qs from "qs";
 
-function capitalizeFirstLetter(string: string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+import { useDebounce } from "../../hooks/useDebounce";
+import { Car } from "./Types";
+
+function formatModel(string: string) {
+  const newString = string.split("/").join("Slash");
+
+  return newString.charAt(0).toUpperCase() + newString.slice(1);
 }
 
 const FUEL = {
@@ -50,25 +55,51 @@ const BODY = {
 };
 
 export function useCars(carData: any) {
-  const [cars, setCars] = useState<object[] | null>(null);
+  const [cars, setCars] = useState<Car[] | null>(null);
+  const [settings, setSettings] = useState({
+    yearFrom: carData.year - 1,
+    yearTo: carData.year + 1,
+  });
+
+  const debouncedSettings = useDebounce(settings, 1500);
+
+  const toggleVisibility = (item: Car) => {
+    setCars(
+      (prevState: Car[] | null) =>
+        prevState?.map((car: Car) =>
+          car.id === item.id ? { ...car, isVisible: !car.isVisible } : car
+        ) || null
+    );
+  };
 
   useEffect(() => {
     if (carData) {
+      setCars(null);
+
       const sendRequest = async () => {
         const body = {
           brand: carData.brand,
-          modelId: carData.brand + capitalizeFirstLetter(carData.model),
-          issueYearFrom: carData.year,
-          issueYearTo: carData.year,
-          capacityFrom: carData.volume,
-          capacityTo: carData.volume,
-          engines: [FUEL[carData.fuel]],
-          bodyTypes: [BODY[carData.body]],
+          modelId: carData.brand + formatModel(carData.model),
+          issueYearFrom: debouncedSettings.yearFrom,
+          issueYearTo: debouncedSettings.yearTo,
           period: 7,
           deleted: true,
           sorting: 2,
           page: 0,
         };
+
+        if (carData.volume) {
+          body.capacityFrom = (carData.volume / 1000).toFixed(1);
+          body.capacityTo = (carData.volume / 1000).toFixed(1);
+        }
+
+        if (carData.fuel) {
+          body.engines = [FUEL[carData.fuel]];
+        }
+
+        if (carData.body) {
+          body.bodyTypes = [BODY[carData.body]];
+        }
 
         const response = await axios({
           method: "post",
@@ -79,12 +110,14 @@ export function useCars(carData: any) {
           },
         });
 
-        setCars(response.data);
+        setCars(
+          response.data.map((item: Car) => ({ ...item, isVisible: true }))
+        );
       };
 
       sendRequest();
     }
-  }, [carData]);
+  }, [carData, debouncedSettings]);
 
-  return { cars };
+  return { cars, settings, setSettings, toggleVisibility };
 }

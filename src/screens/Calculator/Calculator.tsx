@@ -10,9 +10,16 @@ import {
   View,
 } from "react-native";
 
+import { useCalculator } from "../../hooks/useCalculator";
 import { useTheme } from "../../hooks/useTheme";
-import { ADDITIONAL_COSTS, DATES, UNCLE_PRICE } from "./constants";
-import { useCalculator } from "./useCalculator";
+import {
+  ADDITIONAL_COSTS,
+  ADDITIONAL_COSTS_DEFAULT,
+  DATES,
+  DATES_DEFAULT,
+  UNCLE_PRICE,
+  UNCLE_PRICE_DEFAULT,
+} from "./constants";
 
 const useStyles = ({ colors }: { colors: any }) =>
   StyleSheet.create({
@@ -29,8 +36,7 @@ const useStyles = ({ colors }: { colors: any }) =>
     },
     itemsContainer: {
       flexDirection: "row",
-      flexWrap: "wrap",
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       marginHorizontal: 16,
     },
     itemContainer: {
@@ -66,17 +72,17 @@ export function Calculator({ navigation }: { navigation: any }) {
   const styles = useStyles({ colors });
 
   const [data, setData] = useState({
-    additionalCosts: ADDITIONAL_COSTS[1],
-    date: DATES[2],
+    additionalCosts: ADDITIONAL_COSTS_DEFAULT,
+    year: DATES_DEFAULT.value,
     price: "",
-    unclePrice: UNCLE_PRICE[1],
+    unclePrice: UNCLE_PRICE_DEFAULT,
     volume: "",
   });
 
   const total = useCalculator(data);
 
   const onDatePress = (value: any) =>
-    setData((prevState) => ({ ...prevState, date: value }));
+    setData((prevState) => ({ ...prevState, year: value }));
 
   const onVolumeChange = (value: any) =>
     setData((prevState) => ({ ...prevState, volume: value }));
@@ -97,45 +103,51 @@ export function Calculator({ navigation }: { navigation: any }) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <Text style={styles.title}>Объём двигателя:</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="прим. 1600"
-          keyboardType="number-pad"
-          onChangeText={onVolumeChange}
-          placeholderTextColor={colors.textInputPlaceholder}
-          value={data.volume}
-        />
+        <View style={[styles.itemsContainer, { marginHorizontal: 0 }]}>
+          <View>
+            <Text style={styles.title}>Объём двигателя:</Text>
+            <TextInput
+              style={styles.textInput}
+              placeholder="прим. 1600"
+              keyboardType="number-pad"
+              onChangeText={onVolumeChange}
+              placeholderTextColor={colors.textInputPlaceholder}
+              value={data.volume}
+            />
+          </View>
 
-        <Text style={styles.title}>Цена автомобиля:</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="прим. 6000"
-          keyboardType="number-pad"
-          onChangeText={onPriceChange}
-          placeholderTextColor={colors.textInputPlaceholder}
-          value={data.price}
-        />
+          <View>
+            <Text style={styles.title}>Цена автомобиля:</Text>
+            <TextInput
+              style={styles.textInput}
+              placeholder="прим. 6000"
+              keyboardType="number-pad"
+              onChangeText={onPriceChange}
+              placeholderTextColor={colors.textInputPlaceholder}
+              value={data.price}
+            />
+          </View>
+        </View>
 
         <Text style={styles.title}>Дата выпуска:</Text>
         <View style={styles.itemsContainer}>
-          {DATES.map((date) => (
+          {DATES.map(({ title, value }) => (
             <TouchableOpacity
               activeOpacity={0.5}
               style={[
                 styles.itemContainer,
-                data.date === date && styles.itemSelected,
+                data.year === value && styles.itemSelected,
               ]}
-              key={`date_${date}`}
-              onPress={() => onDatePress(date)}
+              key={`date_${value}`}
+              onPress={() => onDatePress(value)}
             >
               <Text
                 style={[
                   styles.itemText,
-                  data.date === date && styles.itemTextSelected,
+                  data.year === value && styles.itemTextSelected,
                 ]}
               >
-                {date}
+                {title}
               </Text>
             </TouchableOpacity>
           ))}
@@ -165,7 +177,7 @@ export function Calculator({ navigation }: { navigation: any }) {
           ))}
         </View>
 
-        <Text style={styles.title}>Доп. расходы (утильсбор итд):</Text>
+        <Text style={styles.title}>Доп. расходы (утильсбор и тд.):</Text>
         <View style={styles.itemsContainer}>
           {ADDITIONAL_COSTS.map((additionalCosts) => (
             <TouchableOpacity

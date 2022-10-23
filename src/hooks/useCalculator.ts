@@ -1,17 +1,24 @@
-import { DATES } from "./constants";
+import {
+  ADDITIONAL_COSTS_DEFAULT,
+  UNCLE_PRICE_DEFAULT,
+} from "../screens/Calculator/constants";
 
 export function useCalculator({
-  date,
+  year,
   price,
   volume,
-  unclePrice,
-  additionalCosts,
+  unclePrice = UNCLE_PRICE_DEFAULT,
+  additionalCosts = ADDITIONAL_COSTS_DEFAULT,
 }: any) {
+  if (!year || !price || !volume) {
+    return 0;
+  }
+
   const parsedPrice = parseInt(price, 10) || 0;
   const parsedVolume = parseInt(volume, 10) || 0;
 
   const duty = getDuty({
-    date,
+    year,
     price: parsedPrice,
     volume: parsedVolume,
   });
@@ -21,8 +28,8 @@ export function useCalculator({
   );
 }
 
-function getDuty({ date, price, volume }: any) {
-  if (date === DATES[0]) {
+function getDuty({ year, price, volume }: any) {
+  if (year >= 2019) {
     if (price <= 8500) {
       return price * 0.54 < volume * 2.5 ? volume * 2.5 : price * 0.54;
     } else if (price > 8500 && price <= 16700) {
@@ -36,7 +43,7 @@ function getDuty({ date, price, volume }: any) {
     } else if (price > 169000) {
       return price * 0.48 < volume * 20 ? volume * 20 : price * 0.48;
     }
-  } else if (date === DATES[1]) {
+  } else if (year >= 2018) {
     if (volume <= 1000) {
       return volume * 1.5;
     } else if (volume > 1000 && volume <= 1500) {
@@ -50,7 +57,7 @@ function getDuty({ date, price, volume }: any) {
     } else if (volume > 3000) {
       return volume * 3.6;
     }
-  } else if (date === DATES[2]) {
+  } else {
     if (volume <= 1000) {
       return volume * 3;
     } else if (volume > 1000 && volume <= 1500) {
