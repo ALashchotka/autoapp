@@ -209,6 +209,25 @@ export function Filter({ navigation }: { navigation: any }) {
             </TouchableOpacity>
           </>
         )}
+
+        {!carData && (
+          <>
+            <Text style={styles.title}>Не работает с:</Text>
+            <Text style={[styles.value, { marginBottom: 0 }]}>
+              - Volvo, Mercedes
+            </Text>
+            <Text style={[styles.value, { marginBottom: 0 }]}>
+              - двойными марками и моделями (Alfa Romeo, Passat CC, IS 250, CX-7
+              и тд.)
+            </Text>
+            <Text style={[styles.value, { marginBottom: 0 }]}>
+              - купе, кабриолет, лифтбэк, микроавтобус
+            </Text>
+            <Text style={[styles.value, { marginBottom: 0 }]}>
+              - топливом, кроме бензина и дизеля (бензин/газ, электро и тд.)
+            </Text>
+          </>
+        )}
       </ScrollView>
     </SafeAreaView>
   );

@@ -177,7 +177,7 @@ export function Calculator({ navigation }: { navigation: any }) {
           ))}
         </View>
 
-        <Text style={styles.title}>Доп. расходы (утильсбор итд):</Text>
+        <Text style={styles.title}>Доп. расходы (утильсбор и тд.):</Text>
         <View style={styles.itemsContainer}>
           {ADDITIONAL_COSTS.map((additionalCosts) => (
             <TouchableOpacity
