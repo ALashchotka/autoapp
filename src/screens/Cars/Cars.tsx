@@ -11,6 +11,7 @@ import {
 
 import { useTheme } from "../../hooks/useTheme";
 import { CarItem } from "./CarItem/CarItem";
+import { Settings } from "./Settings/Settings";
 import { useCars } from "./useCars";
 
 const useStyles = ({ colors }: { colors: any }) =>
@@ -42,7 +43,10 @@ export function Cars({ route }: { route: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const { cars, priceDiff, toggleVisibility } = useCars(route.params);
+  const carData = route.params;
+
+  const { cars, priceDiff, settings, setSettings, toggleVisibility } =
+    useCars(carData);
 
   const keyExtractor = (item: any) => `car_${item.id}`;
 
@@ -54,21 +58,6 @@ export function Cars({ route }: { route: any }) {
     <SafeAreaView style={styles.container}>
       {!!cars && (
         <>
-          <View style={styles.titleContainer}>
-            <Text style={styles.title}>
-              Всего:{" "}
-              {cars.length === 30 ? "больше " + cars.length : cars.length}
-            </Text>
-            <Text style={styles.title}>
-              Продано:{" "}
-              {
-                cars.filter(
-                  ({ isDeleted }: { isDeleted: boolean }) => isDeleted
-                ).length
-              }
-            </Text>
-          </View>
-
           <Text style={styles.title}>
             Зазор:&nbsp;
             <Text style={{ color: priceDiff > 0 ? "green" : "red" }}>
@@ -80,6 +69,26 @@ export function Cars({ route }: { route: any }) {
             keyExtractor={keyExtractor}
             data={cars}
             renderItem={renderItem}
+            ListHeaderComponent={
+              <>
+                <Settings settings={settings} setSettings={setSettings} />
+
+                <View style={styles.titleContainer}>
+                  <Text style={styles.title}>
+                    Всего:{" "}
+                    {cars.length === 30 ? "больше " + cars.length : cars.length}
+                  </Text>
+                  <Text style={styles.title}>
+                    Продано:{" "}
+                    {
+                      cars.filter(
+                        ({ isDeleted }: { isDeleted: boolean }) => isDeleted
+                      ).length
+                    }
+                  </Text>
+                </View>
+              </>
+            }
           />
         </>
       )}

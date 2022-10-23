@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import qs from "qs";
 
+import { useDebounce } from "../../hooks/useDebounce";
+
 function formatModel(string: string) {
   const newString = string.split("/").join("Slash");
 
@@ -53,6 +55,12 @@ const BODY = {
 
 export function useCars(carData: any) {
   const [cars, setCars] = useState<object[] | null>(null);
+  const [settings, setSettings] = useState({
+    yearFrom: carData.year - 1,
+    yearTo: carData.year + 1,
+  });
+
+  const debouncedSettings = useDebounce(settings, 1500);
 
   const priceDiff = cars?.length
     ? cars.filter(({ isVisible }) => isVisible)[0].priceUSD - carData.total
@@ -68,12 +76,14 @@ export function useCars(carData: any) {
 
   useEffect(() => {
     if (carData) {
+      setCars(null);
+
       const sendRequest = async () => {
         const body = {
           brand: carData.brand,
           modelId: carData.brand + formatModel(carData.model),
-          issueYearFrom: carData.year - 1,
-          issueYearTo: carData.year + 1,
+          issueYearFrom: debouncedSettings.yearFrom,
+          issueYearTo: debouncedSettings.yearTo,
           capacityFrom: (carData.volume / 1000).toFixed(1),
           capacityTo: (carData.volume / 1000).toFixed(1),
           engines: [FUEL[carData.fuel]],
@@ -100,7 +110,7 @@ export function useCars(carData: any) {
 
       sendRequest();
     }
-  }, [carData]);
+  }, [carData, debouncedSettings]);
 
-  return { cars, priceDiff, toggleVisibility };
+  return { cars, priceDiff, settings, setSettings, toggleVisibility };
 }
