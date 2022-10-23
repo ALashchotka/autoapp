@@ -36,8 +36,7 @@ const useStyles = ({ colors }: { colors: any }) =>
     },
     itemsContainer: {
       flexDirection: "row",
-      flexWrap: "wrap",
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       marginHorizontal: 16,
     },
     itemContainer: {
@@ -104,25 +103,31 @@ export function Calculator({ navigation }: { navigation: any }) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <Text style={styles.title}>Объём двигателя:</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="прим. 1600"
-          keyboardType="number-pad"
-          onChangeText={onVolumeChange}
-          placeholderTextColor={colors.textInputPlaceholder}
-          value={data.volume}
-        />
+        <View style={[styles.itemsContainer, { marginHorizontal: 0 }]}>
+          <View>
+            <Text style={styles.title}>Объём двигателя:</Text>
+            <TextInput
+              style={styles.textInput}
+              placeholder="прим. 1600"
+              keyboardType="number-pad"
+              onChangeText={onVolumeChange}
+              placeholderTextColor={colors.textInputPlaceholder}
+              value={data.volume}
+            />
+          </View>
 
-        <Text style={styles.title}>Цена автомобиля:</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="прим. 6000"
-          keyboardType="number-pad"
-          onChangeText={onPriceChange}
-          placeholderTextColor={colors.textInputPlaceholder}
-          value={data.price}
-        />
+          <View>
+            <Text style={styles.title}>Цена автомобиля:</Text>
+            <TextInput
+              style={styles.textInput}
+              placeholder="прим. 6000"
+              keyboardType="number-pad"
+              onChangeText={onPriceChange}
+              placeholderTextColor={colors.textInputPlaceholder}
+              value={data.price}
+            />
+          </View>
+        </View>
 
         <Text style={styles.title}>Дата выпуска:</Text>
         <View style={styles.itemsContainer}>
