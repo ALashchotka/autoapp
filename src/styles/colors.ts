@@ -1,3 +1,5 @@
+export const DARK_THEME = {};
+
 export const LIGHT_THEME = {
   screenBackground: "#EEEEEE",
   primary: "#4E85BE",
