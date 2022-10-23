@@ -88,7 +88,6 @@ const useStyles = ({ colors }: { colors: any }) =>
 const INJECTED_JAVASCRIPT = `(function() {
   const element = document.getElementsByClassName('export-price-value')[0]
     || document.getElementsByClassName('price-value')[0]
-    || document.getElementsByClassName('price')[0]
 
   const price = element.innerText.split(' ').join('').slice(0, -1)
 
@@ -99,7 +98,7 @@ export function Filter({ navigation }: { navigation: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const { carData, link, setCarData, setLink } = useLink();
+  const { carData, link, setCarData, onLinkChange } = useLink();
 
   const openCarsList = () => {
     navigation.navigate("Cars", carData);
@@ -134,12 +133,12 @@ export function Filter({ navigation }: { navigation: any }) {
             style={styles.textInput}
             placeholder="Ссылка"
             placeholderTextColor={colors.textInputPlaceholder}
-            onChangeText={setLink}
+            onChangeText={onLinkChange}
             value={link}
           />
           <TouchableOpacity
             style={styles.textInputClearButton}
-            onPress={() => setLink("")}
+            onPress={() => onLinkChange("")}
             hitSlop={{
               top: 10,
               right: 10,
