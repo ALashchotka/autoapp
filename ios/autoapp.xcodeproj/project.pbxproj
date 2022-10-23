@@ -491,7 +491,7 @@
 				DEVELOPMENT_TEAM = TLT9XB9AJ5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = autoapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Перекупчег";
+				INFOPLIST_KEY_CFBundleDisplayName = "ПерекупЧЕК";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -524,7 +524,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TLT9XB9AJ5;
 				INFOPLIST_FILE = autoapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Перекупчег";
+				INFOPLIST_KEY_CFBundleDisplayName = "ПерекупЧЕК";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
