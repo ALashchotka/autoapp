@@ -28,6 +28,14 @@ const formatModel = (brand: string, model: string) => {
 
   if (brand === "opel") {
     switch (model) {
+      case "astra":
+        return "Astra/AstraOPC";
+      case "insignia":
+        return "Insignia/InsigniaOPS";
+      case "meriva":
+        return "Meriva/MerivaOPS";
+      case "vectra":
+        return "Vectra/VectraOPC";
       case "zafira":
         return "Zafira/ZafiraOPC";
     }
