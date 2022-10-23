@@ -4,6 +4,7 @@ import axios from "axios";
 import qs from "qs";
 
 import { useDebounce } from "../../hooks/useDebounce";
+import { Car } from "./Types";
 
 function formatModel(string: string) {
   const newString = string.split("/").join("Slash");
@@ -54,7 +55,7 @@ const BODY = {
 };
 
 export function useCars(carData: any) {
-  const [cars, setCars] = useState<object[] | null>(null);
+  const [cars, setCars] = useState<Car[] | null>(null);
   const [settings, setSettings] = useState({
     yearFrom: carData.year - 1,
     yearTo: carData.year + 1,
@@ -62,15 +63,12 @@ export function useCars(carData: any) {
 
   const debouncedSettings = useDebounce(settings, 1500);
 
-  const priceDiff = cars?.length
-    ? cars.filter(({ isVisible }) => isVisible)[0].priceUSD - carData.total
-    : 0;
-
-  const toggleVisibility = (item) => {
-    setCars((prevState) =>
-      prevState?.map((car) =>
-        car.id === item.id ? { ...car, isVisible: !car.isVisible } : car
-      )
+  const toggleVisibility = (item: Car) => {
+    setCars(
+      (prevState: Car[] | null) =>
+        prevState?.map((car: Car) =>
+          car.id === item.id ? { ...car, isVisible: !car.isVisible } : car
+        ) || null
     );
   };
 
@@ -113,7 +111,7 @@ export function useCars(carData: any) {
         });
 
         setCars(
-          response.data.map((item: any) => ({ ...item, isVisible: true }))
+          response.data.map((item: Car) => ({ ...item, isVisible: true }))
         );
       };
 
@@ -121,5 +119,5 @@ export function useCars(carData: any) {
     }
   }, [carData, debouncedSettings]);
 
-  return { cars, priceDiff, settings, setSettings, toggleVisibility };
+  return { cars, settings, setSettings, toggleVisibility };
 }

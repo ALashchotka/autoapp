@@ -12,6 +12,7 @@ import {
 import { useTheme } from "../../hooks/useTheme";
 import { CarItem } from "./CarItem/CarItem";
 import { Settings } from "./Settings/Settings";
+import { Car } from "./Types";
 import { useCars } from "./useCars";
 
 const useStyles = ({ colors }: { colors: any }) =>
@@ -45,52 +46,45 @@ export function Cars({ route }: { route: any }) {
 
   const carData = route.params;
 
-  const { cars, priceDiff, settings, setSettings, toggleVisibility } =
-    useCars(carData);
+  const { cars, settings, setSettings, toggleVisibility } = useCars(carData);
 
-  const keyExtractor = (item: any) => `car_${item.id}`;
+  const keyExtractor = (item: Car) => `car_${item.id}`;
 
-  const renderItem = ({ item }: { item: any }) => {
-    return <CarItem item={item} toggleVisibility={toggleVisibility} />;
+  const renderItem = ({ item }: { item: Car }) => {
+    return (
+      <CarItem
+        carData={carData}
+        item={item}
+        toggleVisibility={toggleVisibility}
+      />
+    );
   };
 
   return (
     <SafeAreaView style={styles.container}>
       {!!cars && (
-        <>
-          <Text style={styles.title}>
-            Зазор:&nbsp;
-            <Text style={{ color: priceDiff > 0 ? "green" : "red" }}>
-              {priceDiff}
-            </Text>
-          </Text>
+        <FlatList
+          keyExtractor={keyExtractor}
+          data={cars}
+          renderItem={renderItem}
+          ListHeaderComponent={
+            <>
+              <Settings settings={settings} setSettings={setSettings} />
 
-          <FlatList
-            keyExtractor={keyExtractor}
-            data={cars}
-            renderItem={renderItem}
-            ListHeaderComponent={
-              <>
-                <Settings settings={settings} setSettings={setSettings} />
-
-                <View style={styles.titleContainer}>
-                  <Text style={styles.title}>
-                    Всего:{" "}
-                    {cars.length === 30 ? "больше " + cars.length : cars.length}
-                  </Text>
-                  <Text style={styles.title}>
-                    Продано:{" "}
-                    {
-                      cars.filter(
-                        ({ isDeleted }: { isDeleted: boolean }) => isDeleted
-                      ).length
-                    }
-                  </Text>
-                </View>
-              </>
-            }
-          />
-        </>
+              <View style={styles.titleContainer}>
+                <Text style={styles.title}>Всего: {cars.length}</Text>
+                <Text style={styles.title}>
+                  Продано:{" "}
+                  {
+                    cars.filter(
+                      ({ isDeleted }: { isDeleted: boolean }) => isDeleted
+                    ).length
+                  }
+                </Text>
+              </View>
+            </>
+          }
+        />
       )}
 
       {!cars && (

@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
+import { Car } from "../Types";
+
 const styles = StyleSheet.create({
   container: {
     margin: 16,
@@ -44,6 +46,10 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 18,
     fontWeight: "600",
+  },
+  diffPrice: {
+    fontSize: 14,
+    fontWeight: "400",
   },
   tableContainer: {
     marginVertical: 8,
@@ -91,11 +97,13 @@ const styles = StyleSheet.create({
 });
 
 export function CarItem({
+  carData,
   item,
   toggleVisibility,
 }: {
-  item: any;
-  toggleVisibility: any;
+  carData: object;
+  item: Car;
+  toggleVisibility: (item: Car) => void;
 }) {
   const onLinkPress = () => {
     Linking.openURL(item.link);
@@ -117,7 +125,20 @@ export function CarItem({
               <Text style={styles.title}>
                 {item.name}, {item.issueYear}
               </Text>
-              <Text style={styles.price}>{item.priceUSD}$</Text>
+              <Text style={styles.price}>
+                {item.priceUSD}$
+                <Text
+                  style={[
+                    styles.diffPrice,
+                    {
+                      color:
+                        item.priceUSD - carData.total > 0 ? "green" : "red",
+                    },
+                  ]}
+                >
+                  &nbsp;({item.priceUSD - carData.total})
+                </Text>
+              </Text>
             </View>
 
             <View style={styles.tableContainer}>
