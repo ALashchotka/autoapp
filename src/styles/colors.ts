@@ -1,13 +1,17 @@
-export const DARK_THEME = {
-  background: "#1a1a1a",
-  primary: "#4e85be",
-  text: "#FFFFFF",
-  itemBackground: "#333333",
-};
-
 export const LIGHT_THEME = {
-  background: "#EEEEEE",
-  primary: "#4e85be",
+  screenBackground: "#EEEEEE",
+  primary: "#4E85BE",
   text: "#000000",
-  itemBackground: "#E0E0E0",
+
+  textInputBackground: "#E0E0E0",
+  textInputText: "#000000",
+  textInputPlaceholder: "#00000050",
+
+  selectableItemBackground: "#E0E0E0",
+  selectableItemText: "#000000",
+  selectableItemSelectedBackground: "#4E85BE",
+  selectableItemSelectedText: "#FFFFFF",
+
+  buttonBackground: "#4E85BE",
+  buttonText: "#FFFFFF",
 };

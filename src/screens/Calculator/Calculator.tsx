@@ -18,7 +18,7 @@ const useStyles = ({ colors }: { colors: any }) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: colors.background,
+      backgroundColor: colors.screenBackground,
     },
     title: {
       marginHorizontal: 24,
@@ -30,29 +30,29 @@ const useStyles = ({ colors }: { colors: any }) =>
     itemsContainer: {
       flexDirection: "row",
       flexWrap: "wrap",
-      justifyContent: "space-between",
+      justifyContent: "space-around",
       marginHorizontal: 16,
     },
     itemContainer: {
       marginHorizontal: 8,
       marginVertical: 16,
-      backgroundColor: colors.itemBackground,
+      backgroundColor: colors.selectableItemBackground,
       borderRadius: 10,
       paddingVertical: 8,
       paddingHorizontal: 16,
     },
     itemSelected: {
-      backgroundColor: colors.primary,
+      backgroundColor: colors.selectableItemSelectedBackground,
     },
     itemText: {
-      color: colors.text,
+      color: colors.selectableItemText,
     },
     itemTextSelected: {
-      color: colors.text,
+      color: colors.selectableItemSelectedText,
     },
     textInput: {
-      backgroundColor: colors.itemBackground,
-      color: colors.text,
+      backgroundColor: colors.textInputBackground,
+      color: colors.textInputText,
       marginVertical: 16,
       marginHorizontal: 24,
       borderRadius: 10,
@@ -91,7 +91,7 @@ export function Calculator({ navigation }: { navigation: any }) {
     setData((prevState) => ({ ...prevState, additionalCosts: value }));
 
   useEffect(() => {
-    navigation.setOptions({ title: `Total: ~${total}$` });
+    navigation.setOptions({ title: `Итого: ~${total}$` });
   }, [total]);
 
   return (
@@ -100,20 +100,20 @@ export function Calculator({ navigation }: { navigation: any }) {
         <Text style={styles.title}>Объём двигателя:</Text>
         <TextInput
           style={styles.textInput}
-          placeholder="Объём"
+          placeholder="прим. 1600"
           keyboardType="number-pad"
           onChangeText={onVolumeChange}
-          placeholderTextColor={colors.text}
+          placeholderTextColor={colors.textInputPlaceholder}
           value={data.volume}
         />
 
         <Text style={styles.title}>Цена автомобиля:</Text>
         <TextInput
           style={styles.textInput}
-          placeholder="Цена"
+          placeholder="прим. 6000"
           keyboardType="number-pad"
           onChangeText={onPriceChange}
-          placeholderTextColor={colors.text}
+          placeholderTextColor={colors.textInputPlaceholder}
           value={data.price}
         />
 

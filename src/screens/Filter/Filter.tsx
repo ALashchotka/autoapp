@@ -1,7 +1,6 @@
 import React from "react";
 
 import {
-  ActivityIndicator,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -10,6 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { useTheme } from "../../hooks/useTheme";
 import { useLink } from "./useLink";
@@ -18,7 +18,7 @@ const useStyles = ({ colors }: { colors: any }) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: colors.background,
+      backgroundColor: colors.screenBackground,
     },
     title: {
       marginHorizontal: 24,
@@ -35,27 +35,36 @@ const useStyles = ({ colors }: { colors: any }) =>
       fontWeight: "400",
       color: colors.text,
     },
+    textInputContainer: {
+      justifyContent: "center",
+    },
     textInput: {
-      backgroundColor: colors.itemBackground,
-      color: colors.text,
+      backgroundColor: colors.textInputBackground,
+      color: colors.textInputText,
       marginVertical: 16,
       marginHorizontal: 24,
       borderRadius: 10,
       paddingVertical: 8,
       paddingHorizontal: 16,
     },
+    textInputClearButton: {
+      position: "absolute",
+      right: 32,
+    },
 
     button: {
       alignSelf: "center",
-      backgroundColor: colors.primary,
+      backgroundColor: colors.buttonBackground,
       marginHorizontal: 8,
       marginVertical: 16,
       borderRadius: 10,
       paddingVertical: 8,
       paddingHorizontal: 16,
+      width: "60%",
     },
     buttonText: {
-      color: colors.text,
+      color: colors.buttonText,
+      textAlign: "center",
     },
   });
 
@@ -63,52 +72,69 @@ export function Filter({ navigation }: { navigation: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const { cars, data, link, setLink } = useLink();
+  const { carData, link, setLink } = useLink();
+
+  const openCarsList = () => {
+    navigation.navigate("Cars", carData);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
         <Text style={styles.title}>Ссылка autoplius:</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Ссылка"
-          onChangeText={setLink}
-          value={link}
-        />
 
-        {!!data && (
+        <View style={styles.textInputContainer}>
+          <TextInput
+            style={styles.textInput}
+            placeholder="Ссылка"
+            placeholderTextColor={colors.textInputPlaceholder}
+            onChangeText={setLink}
+            value={link}
+          />
+          <TouchableOpacity
+            style={styles.textInputClearButton}
+            onPress={() => setLink("")}
+            hitSlop={{
+              top: 10,
+              right: 10,
+              bottom: 10,
+              left: 10,
+            }}
+          >
+            <MaterialCommunityIcons
+              name="close"
+              color={colors.textInputText}
+              size={18}
+            />
+          </TouchableOpacity>
+        </View>
+
+        {!!carData && (
           <>
             <Text style={styles.title}>Марка</Text>
-            <Text style={styles.value}>{data.brand}</Text>
+            <Text style={styles.value}>{carData.brand}</Text>
             <Text style={styles.title}>Модель</Text>
-            <Text style={styles.value}>{data.model}</Text>
+            <Text style={styles.value}>{carData.model}</Text>
             <Text style={styles.title}>Тип топлива</Text>
-            <Text style={styles.value}>{data.fuel}</Text>
+            <Text style={styles.value}>{carData.fuel}</Text>
             <Text style={styles.title}>Объём</Text>
-            <Text style={styles.value}>{data.volume}</Text>
+            <Text style={styles.value}>{carData.volume}</Text>
             <Text style={styles.title}>Год выпуска</Text>
-            <Text style={styles.value}>{data.year}</Text>
+            <Text style={styles.value}>{carData.year}</Text>
             <Text style={styles.title}>Кузов</Text>
-            <Text style={styles.value}>{data.body}</Text>
-          </>
-        )}
+            <Text style={styles.value}>{carData.body}</Text>
 
-        {!!cars && (
-          <View>
-            <Text style={styles.value}>
-              Найдено {cars.length} машин удовлетворяющих условию:
-            </Text>
             <TouchableOpacity
               activeOpacity={0.5}
               style={styles.button}
-              onPress={() => {}}
+              onPress={openCarsList}
             >
-              <Text style={styles.buttonText}>просмотреть</Text>
+              <Text style={styles.buttonText}>
+                Просмотреть объявления за последний месяц
+              </Text>
             </TouchableOpacity>
-          </View>
+          </>
         )}
-
-        {!cars && !!data && <ActivityIndicator color={colors.text} />}
       </ScrollView>
     </SafeAreaView>
   );
