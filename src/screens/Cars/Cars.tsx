@@ -42,12 +42,12 @@ export function Cars({ route }: { route: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const { cars, priceDiff } = useCars(route.params);
+  const { cars, priceDiff, toggleVisibility } = useCars(route.params);
 
   const keyExtractor = (item: any) => `car_${item.id}`;
 
   const renderItem = ({ item }: { item: any }) => {
-    return <CarItem item={item} />;
+    return <CarItem item={item} toggleVisibility={toggleVisibility} />;
   };
 
   return (

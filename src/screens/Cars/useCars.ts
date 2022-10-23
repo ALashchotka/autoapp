@@ -54,7 +54,17 @@ const BODY = {
 export function useCars(carData: any) {
   const [cars, setCars] = useState<object[] | null>(null);
 
-  const priceDiff = cars?.length ? cars[0].priceUSD - carData.total : 0;
+  const priceDiff = cars?.length
+    ? cars.filter(({ isVisible }) => isVisible)[0].priceUSD - carData.total
+    : 0;
+
+  const toggleVisibility = (item) => {
+    setCars((prevState) =>
+      prevState?.map((car) =>
+        car.id === item.id ? { ...car, isVisible: !car.isVisible } : car
+      )
+    );
+  };
 
   useEffect(() => {
     if (carData) {
@@ -83,12 +93,14 @@ export function useCars(carData: any) {
           },
         });
 
-        setCars(response.data);
+        setCars(
+          response.data.map((item: any) => ({ ...item, isVisible: true }))
+        );
       };
 
       sendRequest();
     }
   }, [carData]);
 
-  return { cars, priceDiff };
+  return { cars, priceDiff, toggleVisibility };
 }
