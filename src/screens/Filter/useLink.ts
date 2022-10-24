@@ -26,6 +26,17 @@ const formatModel = (brand: string, model: string) => {
     }
   }
 
+  if (brand === "peugeot") {
+    switch (model) {
+      case "205":
+        return "205/205GTI";
+      case "208":
+        return "208/208GTI";
+      case "308":
+        return "308/308GTI";
+    }
+  }
+
   if (brand === "opel") {
     switch (model) {
       case "astra":
