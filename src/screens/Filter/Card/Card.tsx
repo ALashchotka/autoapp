@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  ActivityIndicator,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 
 import { useTheme } from "../../../hooks/useTheme";
 
@@ -47,11 +40,9 @@ const useStyles = ({ colors }: { colors: any }) =>
   });
 
 export function Card({
-  onRemove,
   title,
   value,
 }: {
-  onRemove?: () => void;
   title: string;
   value: string | number;
 }) {
@@ -63,16 +54,6 @@ export function Card({
       <Text style={styles.title}>{title}</Text>
       {!!value && <Text style={styles.value}>{value}</Text>}
       {!value && <ActivityIndicator style={styles.value} />}
-
-      {!!onRemove && (
-        <TouchableOpacity
-          activeOpacity={0.5}
-          style={styles.closeButton}
-          onPress={onRemove}
-        >
-          <MaterialCommunityIcons name="close" size={16} />
-        </TouchableOpacity>
-      )}
     </View>
   );
 }

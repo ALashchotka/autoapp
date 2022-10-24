@@ -10,8 +10,8 @@ import {
   View,
 } from "react-native";
 
-import { useCalculator } from "../../hooks/useCalculator";
 import { useTheme } from "../../hooks/useTheme";
+import { getTotalPrice } from "../../utils/getTotalPrice";
 import {
   ADDITIONAL_COSTS,
   ADDITIONAL_COSTS_DEFAULT,
@@ -73,32 +73,32 @@ export function Calculator({ navigation }: { navigation: any }) {
 
   const [data, setData] = useState({
     additionalCosts: ADDITIONAL_COSTS_DEFAULT,
-    year: DATES_DEFAULT.value,
+    capacity: "",
     price: "",
     unclePrice: UNCLE_PRICE_DEFAULT,
-    volume: "",
+    year: DATES_DEFAULT.value,
   });
 
-  const total = useCalculator(data);
+  const totalPrice = getTotalPrice(data);
 
-  const onDatePress = (value: any) =>
+  const onDatePress = (value: number) =>
     setData((prevState) => ({ ...prevState, year: value }));
 
-  const onVolumeChange = (value: any) =>
-    setData((prevState) => ({ ...prevState, volume: value }));
+  const onVolumeChange = (value: string) =>
+    setData((prevState) => ({ ...prevState, capacity: value }));
 
-  const onPriceChange = (value: any) =>
+  const onPriceChange = (value: string) =>
     setData((prevState) => ({ ...prevState, price: value }));
 
-  const onUnclePricePress = (value: any) =>
+  const onUnclePricePress = (value: number) =>
     setData((prevState) => ({ ...prevState, unclePrice: value }));
 
-  const onAdditionalCostsPress = (value: any) =>
+  const onAdditionalCostsPress = (value: number) =>
     setData((prevState) => ({ ...prevState, additionalCosts: value }));
 
   useEffect(() => {
-    navigation.setOptions({ title: `Итого: ~${total}$` });
-  }, [total]);
+    navigation.setOptions({ title: `Итого: ~${totalPrice}$` });
+  }, [totalPrice]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -112,7 +112,7 @@ export function Calculator({ navigation }: { navigation: any }) {
               keyboardType="number-pad"
               onChangeText={onVolumeChange}
               placeholderTextColor={colors.textInputPlaceholder}
-              value={data.volume}
+              value={data.capacity}
             />
           </View>
 

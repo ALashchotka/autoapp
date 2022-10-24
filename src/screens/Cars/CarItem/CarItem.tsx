@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
+import { CarData } from "../../Filter/Types";
 import { Car } from "../Types";
 
 const styles = StyleSheet.create({
@@ -101,7 +102,7 @@ export function CarItem({
   item,
   toggleVisibility,
 }: {
-  carData: object;
+  carData: CarData;
   item: Car;
   toggleVisibility: (item: Car) => void;
 }) {
@@ -132,11 +133,13 @@ export function CarItem({
                     styles.diffPrice,
                     {
                       color:
-                        item.priceUSD - carData.total > 0 ? "green" : "red",
+                        item.priceUSD - carData.totalPrice > 0
+                          ? "green"
+                          : "red",
                     },
                   ]}
                 >
-                  &nbsp;({item.priceUSD - carData.total})
+                  &nbsp;({item.priceUSD - carData.totalPrice}$)
                 </Text>
               </Text>
             </View>

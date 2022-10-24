@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   SafeAreaView,
@@ -10,10 +10,10 @@ import {
   View,
 } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import WebView from "react-native-webview";
 
 import { useTheme } from "../../hooks/useTheme";
 import { Card } from "./Card/Card";
+import { SiteParser } from "./SiteParser/SiteParser";
 import { useLink } from "./useLink";
 
 const useStyles = ({ colors }: { colors: any }) =>
@@ -85,58 +85,21 @@ const useStyles = ({ colors }: { colors: any }) =>
     },
   });
 
-const INJECTED_JAVASCRIPT = `(function() {
-  const element = document.getElementsByClassName('export-price-value')[0]
-    || document.getElementsByClassName('price-value')[0]
-
-  const price = element.innerText.split(' ').join('').slice(0, -1)
-
-  window.ReactNativeWebView.postMessage(price);
-})();`;
-
 export function Filter({ navigation }: { navigation: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const { carData, link, setCarData, onLinkChange } = useLink();
+  const { link, onLinkChange } = useLink();
+  const [carData, setCarData] = useState<object | null>(null);
 
   const openCarsList = () => {
     navigation.navigate("Cars", carData);
   };
 
-  const onBodyRemove = () => {
-    setCarData((prevState: any) => ({ ...prevState, body: null }));
-  };
-
-  const onFuelRemove = () => {
-    setCarData((prevState: any) => ({ ...prevState, fuel: null }));
-  };
-
-  const onVolumeRemove = () => {
-    setCarData((prevState: any) => ({ ...prevState, volume: null }));
-  };
-
-  const onWebViewMessage = ({
-    nativeEvent: { data },
-  }: {
-    nativeEvent: { data: string };
-  }) =>
-    setCarData((prevState) => ({
-      ...(prevState || {}),
-      price: parseInt(data, 10),
-    }));
-
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        {!!link && !carData?.price && (
-          <WebView
-            style={{ height: 0, width: 0 }}
-            source={{ uri: link }}
-            injectedJavaScript={INJECTED_JAVASCRIPT}
-            onMessage={onWebViewMessage}
-          />
-        )}
+        <SiteParser link={link} setCarData={setCarData} />
 
         <Text style={styles.title}>Ссылка autoplius:</Text>
 
@@ -169,32 +132,14 @@ export function Filter({ navigation }: { navigation: any }) {
         {!!carData && (
           <>
             <View style={styles.dataContainer}>
-              <Card title="Марка" value={carData.brand} />
-              <Card title="Модель" value={carData.model} />
-              {!!carData.fuel && (
-                <Card
-                  onRemove={onFuelRemove}
-                  title="Тип топлива"
-                  value={carData.fuel}
-                />
-              )}
-              {!!carData.volume && (
-                <Card
-                  onRemove={onVolumeRemove}
-                  title="Объём"
-                  value={carData.volume}
-                />
-              )}
-              <Card title="Год выпуска" value={carData.year} />
-              {!!carData.body && (
-                <Card
-                  onRemove={onBodyRemove}
-                  title="Кузов"
-                  value={carData.body}
-                />
-              )}
+              <Card title="Марка" value={carData.brand + " " + carData.model} />
+              <Card title="Тип топлива" value={carData.fuel} />
+              <Card title="Объём" value={carData.capacity} />
+              <Card title="Год выпуска" value={carData.date} />
+              <Card title="Кузов" value={carData.body} />
+              <Card title="Коробка" value={carData.gear} />
               <Card title="Цена" value={carData.price} />
-              <Card title="Итого" value={carData.total} />
+              <Card title="Итого" value={carData.totalPrice} />
             </View>
 
             <TouchableOpacity
@@ -209,21 +154,11 @@ export function Filter({ navigation }: { navigation: any }) {
           </>
         )}
 
-        {!carData && (
+        {!link && (
           <>
             <Text style={styles.title}>Не работает с:</Text>
             <Text style={[styles.value, { marginBottom: 0 }]}>
-              - Volvo, Mercedes
-            </Text>
-            <Text style={[styles.value, { marginBottom: 0 }]}>
-              - двойными марками и моделями (Alfa Romeo, Passat CC, IS 250, CX-7
-              и тд.)
-            </Text>
-            <Text style={[styles.value, { marginBottom: 0 }]}>
-              - купе, кабриолет, лифтбэк, микроавтобус
-            </Text>
-            <Text style={[styles.value, { marginBottom: 0 }]}>
-              - топливом, кроме бензина и дизеля (бензин/газ, электро и тд.)
+              - Alfa Romeo, Land Rover, Volvo
             </Text>
           </>
         )}

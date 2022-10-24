@@ -4,61 +4,32 @@ import axios from "axios";
 import qs from "qs";
 
 import { useDebounce } from "../../hooks/useDebounce";
-import { Car } from "./Types";
+import { CarData } from "../Filter/Types";
+import { BODY, BRANDS, FUEL, MODELS } from "./constants";
+import { Car, SearchParams } from "./Types";
 
-function formatModel(string: string) {
-  const newString = string.split("/").join("Slash");
-
-  return newString.charAt(0).toUpperCase() + newString.slice(1);
+function capitalize(string: string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const FUEL = {
-  petrol: "benzin",
-  dizel: "diesel",
+const formatModel = (model: string) => {
+  return (
+    MODELS[model] ||
+    model
+      .split(" ")
+      .map((item) => capitalize(item.toLowerCase()))
+      .join("")
+      .split("-")
+      .map((item) => capitalize(item))
+      .join("Minus")
+  );
 };
 
-const BODY = {
-  // седан
-  sedanas: "sedan",
-  sedan: "sedan",
-  sedans: "sedan",
-
-  // универсал
-  universal: "wagon",
-  universalas: "wagon",
-  wagon: "wagon",
-
-  // хэтчбек
-  hecbekas: "hatchback",
-  hetchbek: "hatchback",
-  hatchback: "hatchback",
-  hecbeks: "hatchback",
-
-  // минивэн
-  miniven: "minivan",
-  vienaturis: "minivan",
-  "mpv-minivan": "minivan",
-  minivens: "minivan",
-
-  // внедорожник
-  visureigis: "suv",
-  vnedorozhnik: "suv",
-  "suv-off-road": "suv",
-
-  // "": "coupe",
-  // "": "cabriolet",
-  // "": "minibus",
-  // "": "van",
-  // "": "pickup",
-  // "": "liftback",
-  // "": "limousine",
-};
-
-export function useCars(carData: any) {
+export function useCars(carData: CarData) {
   const [cars, setCars] = useState<Car[] | null>(null);
   const [settings, setSettings] = useState({
-    yearFrom: carData.year - 1,
-    yearTo: carData.year + 1,
+    yearFrom: carData.date - 1,
+    yearTo: carData.date + 1,
   });
 
   const debouncedSettings = useDebounce(settings, 1500);
@@ -77,9 +48,9 @@ export function useCars(carData: any) {
       setCars(null);
 
       const sendRequest = async () => {
-        const body = {
-          brand: carData.brand,
-          modelId: carData.brand + formatModel(carData.model),
+        const body: SearchParams = {
+          brand: BRANDS[carData.brand] || carData.brand.toLowerCase(),
+          modelId: carData.brand.toLowerCase() + formatModel(carData.model),
           issueYearFrom: debouncedSettings.yearFrom,
           issueYearTo: debouncedSettings.yearTo,
           period: 7,
@@ -88,9 +59,9 @@ export function useCars(carData: any) {
           page: 0,
         };
 
-        if (carData.volume) {
-          body.capacityFrom = (carData.volume / 1000).toFixed(1);
-          body.capacityTo = (carData.volume / 1000).toFixed(1);
+        if (carData.capacity) {
+          body.capacityFrom = (carData.capacity / 1000).toFixed(1);
+          body.capacityTo = (carData.capacity / 1000).toFixed(1);
         }
 
         if (carData.fuel) {

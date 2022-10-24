@@ -16,3 +16,18 @@ export interface Car {
   priceUSD: number;
   samePhone: string | number;
 }
+
+export interface SearchParams {
+  brand?: string;
+  modelId?: string;
+  issueYearFrom?: number;
+  issueYearTo?: number;
+  period?: number;
+  deleted?: boolean;
+  sorting?: number;
+  page?: number;
+  capacityFrom?: string;
+  capacityTo?: string;
+  engines?: string[];
+  bodyTypes?: string[];
+}
