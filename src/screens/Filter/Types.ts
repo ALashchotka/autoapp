@@ -7,5 +7,6 @@ export interface CarData {
   gear: string;
   model: string;
   price: number;
+  title: string;
   totalPrice: number;
 }

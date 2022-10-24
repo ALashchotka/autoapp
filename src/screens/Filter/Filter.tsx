@@ -14,6 +14,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useTheme } from "../../hooks/useTheme";
 import { Card } from "./Card/Card";
 import { SiteParser } from "./SiteParser/SiteParser";
+import { CarData } from "./Types";
 import { useLink } from "./useLink";
 
 const useStyles = ({ colors }: { colors: any }) =>
@@ -90,7 +91,7 @@ export function Filter({ navigation }: { navigation: any }) {
   const styles = useStyles({ colors });
 
   const { link, onLinkChange } = useLink();
-  const [carData, setCarData] = useState<object | null>(null);
+  const [carData, setCarData] = useState<CarData | null>(null);
 
   const openCarsList = () => {
     navigation.navigate("Cars", carData);
