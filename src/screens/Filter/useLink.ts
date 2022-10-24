@@ -52,6 +52,17 @@ const formatModel = (brand: string, model: string) => {
     }
   }
 
+  if (brand === "renault") {
+    switch (model) {
+      case "clio":
+        return "Clio/ClioRS";
+      case "megane":
+        return "Megane/MeganeRS";
+      case "sandero":
+        return "Sandero/SanderoRS";
+    }
+  }
+
   return model;
 };
 
