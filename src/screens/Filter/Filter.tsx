@@ -132,7 +132,7 @@ export function Filter({ navigation }: { navigation: any }) {
         {!!carData && (
           <>
             <View style={styles.dataContainer}>
-              <Card title="Марка" value={carData.brand + " " + carData.model} />
+              <Card title="Марка" value={carData.title} />
               <Card title="Тип топлива" value={carData.fuel} />
               <Card title="Объём" value={carData.capacity} />
               <Card title="Год выпуска" value={carData.date} />
