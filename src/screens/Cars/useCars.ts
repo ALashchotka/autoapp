@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import qs from "qs";
 
-import { useDebounce } from "../../hooks/useDebounce";
 import { CarData } from "../Search/Types";
 import { BODY, BRANDS, FUEL, MODELS } from "./constants";
 import { Car, SearchParams } from "./Types";
@@ -27,12 +26,6 @@ const formatModel = (model: string) => {
 
 export function useCars(carData: CarData) {
   const [cars, setCars] = useState<Car[] | null>(null);
-  const [settings, setSettings] = useState({
-    yearFrom: carData.date - 1,
-    yearTo: carData.date + 1,
-  });
-
-  const debouncedSettings = useDebounce(settings, 1500);
 
   const toggleVisibility = (item: Car) => {
     setCars(
@@ -51,8 +44,8 @@ export function useCars(carData: CarData) {
         const body: SearchParams = {
           brand: BRANDS[carData.brand] || carData.brand.toLowerCase(),
           modelId: carData.brand.toLowerCase() + formatModel(carData.model),
-          issueYearFrom: debouncedSettings.yearFrom,
-          issueYearTo: debouncedSettings.yearTo,
+          issueYearFrom: carData.date - 1,
+          issueYearTo: carData.date + 1,
           period: 7,
           deleted: true,
           sorting: 2,
@@ -88,7 +81,7 @@ export function useCars(carData: CarData) {
 
       sendRequest();
     }
-  }, [carData, debouncedSettings]);
+  }, [carData]);
 
-  return { cars, settings, setSettings, toggleVisibility };
+  return { cars, toggleVisibility };
 }
