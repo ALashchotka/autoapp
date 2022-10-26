@@ -7,43 +7,54 @@ import { getTotalPrice } from "../../../utils/getTotalPrice";
 import { CarData } from "../Types";
 
 const INJECTED_JAVASCRIPT = `(function() {
-  try {
-    const titleElement = document.getElementsByClassName('title')[0]
-    const title = titleElement.innerText;
+  let increment = 0;
 
-    const priceElement = document.getElementsByClassName('export-price-value')[0]
-      || document.getElementsByClassName('price-value')[0];
-    const price = priceElement.innerText.split(' ').join('').slice(0, -1);
-  
-    const bodyElement = document.getElementsByClassName('field_body_type_id')[0];
-    const body = bodyElement.innerText;
-  
-    const dateElement = document.getElementsByClassName('field_make_date')[0];
-    const date = dateElement.innerText;
-  
-    const gearElement = document.getElementsByClassName('field_gearbox_id')[0];
-    const gear = gearElement.innerText;
-  
-    const fuelElement = document.getElementsByClassName('field_fuel_id')[0];
-    const fuel = fuelElement.innerText;
+  function getData() {
+    try {
+      const titleElement = document.getElementsByClassName('title')[0]
+      const title = titleElement.innerText;
 
-    const capacityElement = document.getElementsByClassName('field_engine')[0];
-    const capacity = capacityElement.innerText.split('cm')[0].trim()
+      const priceElement = document.getElementsByClassName('export-price-value')[0]
+        || document.getElementsByClassName('price-value')[0];
+      const price = priceElement.innerText.split(' ').join('').slice(0, -1);
+    
+      const bodyElement = document.getElementsByClassName('field_body_type_id')[0];
+      const body = bodyElement.innerText;
+    
+      const dateElement = document.getElementsByClassName('field_make_date')[0];
+      const date = dateElement.innerText;
+    
+      const gearElement = document.getElementsByClassName('field_gearbox_id')[0];
+      const gear = gearElement.innerText;
+    
+      const fuelElement = document.getElementsByClassName('field_fuel_id')[0];
+      const fuel = fuelElement.innerText;
 
-    const data = {
-      body,
-      capacity,
-      date,
-      fuel,
-      gear,
-      price,
-      title,
+      const capacityElement = document.getElementsByClassName('field_engine')[0];
+      const capacity = capacityElement.innerText.split('cm')[0].trim()
+
+      const data = {
+        body,
+        capacity,
+        date,
+        fuel,
+        gear,
+        price,
+        title,
+      }
+
+      window.ReactNativeWebView.postMessage(JSON.stringify(data));
+    } catch (error) {
+      if (increment < 3) {
+        increment += 1;
+        setTimeout(() => getData(), 1000);
+      } else {
+        window.ReactNativeWebView.postMessage("error");
+      }
     }
-
-    window.ReactNativeWebView.postMessage(JSON.stringify(data));
-  } catch (error) {
-    window.ReactNativeWebView.postMessage("error");
   }
+
+  getData();
 })();`;
 
 const parseCarData = (data: string): CarData => {
