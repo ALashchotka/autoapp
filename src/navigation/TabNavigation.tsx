@@ -5,27 +5,27 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useTheme } from "../hooks/useTheme";
 import { Calculator } from "../screens/Calculator/Calculator";
 import { Cars } from "../screens/Cars/Cars";
-import { Filter } from "../screens/Filter/Filter";
+import { Search } from "../screens/Search/Search";
 
 const Tab = createBottomTabNavigator();
-const FilterStack = createNativeStackNavigator();
+const SearchStack = createNativeStackNavigator();
 
-function FilterNavigation() {
+function SearchNavigation() {
   const { colors } = useTheme();
 
   return (
-    <FilterStack.Navigator screenOptions={{ headerTintColor: colors.text }}>
-      <FilterStack.Screen
-        name="Filter"
-        component={Filter}
+    <SearchStack.Navigator screenOptions={{ headerTintColor: colors.text }}>
+      <SearchStack.Screen
+        name="Search"
+        component={Search}
         options={{ headerTitle: "Поиск" }}
       />
-      <FilterStack.Screen
+      <SearchStack.Screen
         name="Cars"
         component={Cars}
         options={{ headerTitle: "Машины в продаже" }}
       />
-    </FilterStack.Navigator>
+    </SearchStack.Navigator>
   );
 }
 
@@ -56,8 +56,8 @@ export function TabNavigation() {
         }}
       />
       <Tab.Screen
-        name="FilterNavigation"
-        component={FilterNavigation}
+        name="SearchNavigation"
+        component={SearchNavigation}
         options={{
           title: "Поиск",
           tabBarIcon: ({ color, size }) => (

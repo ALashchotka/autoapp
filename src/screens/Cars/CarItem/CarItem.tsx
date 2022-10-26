@@ -3,7 +3,7 @@ import React from "react";
 import { Image, Linking, Text, TouchableOpacity, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-import { CarData } from "../../Filter/Types";
+import { CarData } from "../../Search/Types";
 import { Car } from "../Types";
 import styles from "./styles";
 

@@ -4,7 +4,7 @@ import axios from "axios";
 import qs from "qs";
 
 import { useDebounce } from "../../hooks/useDebounce";
-import { CarData } from "../Filter/Types";
+import { CarData } from "../Search/Types";
 import { BODY, BRANDS, FUEL, MODELS } from "./constants";
 import { Car, SearchParams } from "./Types";
 

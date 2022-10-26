@@ -17,7 +17,7 @@ import useStyles from "./styles";
 import { CarData } from "./Types";
 import { useLink } from "./useLink";
 
-export function Filter({ navigation }: { navigation: any }) {
+export function Search({ navigation }: { navigation: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
