@@ -1,5 +1,5 @@
 /* eslint-disable sort-exports/sort-exports */
-export const BODY = {
+export const BODY: Record<string, string> = {
   Седан: "sedan",
   Универсал: "wagon",
   Хэтчбек: "hatchback",
@@ -9,13 +9,13 @@ export const BODY = {
   Кабриолет: "cabriolet",
 };
 
-export const BRANDS = {
+export const BRANDS: Record<string, string> = {
   "Alfa Romeo": "alfaRomeo",
   "Land Rover": "landRover",
   "Mercedes-Benz": "mercedes",
 };
 
-export const FUEL = {
+export const FUEL: Record<string, string> = {
   Бензин: "benzin",
   "Бензин / газ": "benzin",
   "Бензин / электричество": "benzin",
@@ -122,7 +122,7 @@ const RENAULT_MODELS = {
   Sandero: "SanderoSlashSanderoRS",
 };
 
-export const MODELS = {
+export const MODELS: Record<string, string> = {
   ...BMW_MODELS,
   ...OPEL_MODELS,
   ...PEUGEOT_MODELS,
