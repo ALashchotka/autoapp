@@ -1,13 +1,16 @@
 // import { useColorScheme } from "react-native";
 
-import { DARK_THEME, LIGHT_THEME } from "../styles/colors";
+import { ColorID, LIGHT_THEME } from "../styles/colors";
 
-export function useTheme(): { colors: any; isDarkMode: boolean } {
+export function useTheme(): {
+  colors: Record<ColorID, string>;
+  isDarkMode: boolean;
+} {
   // const isDarkMode = useColorScheme() === "dark";
   const isDarkMode = false;
 
   return {
-    colors: isDarkMode ? DARK_THEME : LIGHT_THEME,
+    colors: LIGHT_THEME,
     isDarkMode,
   };
 }

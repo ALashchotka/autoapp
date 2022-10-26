@@ -1,6 +1,8 @@
 import { StyleSheet } from "react-native";
 
-export default ({ colors }: { colors: any }) =>
+import { ColorID } from "../../styles/colors";
+
+export default ({ colors }: { colors: Record<ColorID, string> }) =>
   StyleSheet.create({
     container: {
       flex: 1,

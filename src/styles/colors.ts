@@ -1,3 +1,5 @@
+export type ColorID = keyof typeof LIGHT_THEME;
+
 export const DARK_THEME = {};
 
 export const LIGHT_THEME = {

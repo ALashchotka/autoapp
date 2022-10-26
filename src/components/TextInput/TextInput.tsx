@@ -2,9 +2,9 @@ import React from "react";
 
 import {
   StyleProp,
-  StyleSheet,
   Text,
-  TextInput as TextInputRN,
+  TextInput as RNTextInput,
+  TextInputProps as RNTextInputProps,
   View,
   ViewStyle,
 } from "react-native";
@@ -12,7 +12,7 @@ import {
 import { useTheme } from "../../hooks/useTheme";
 import useStyles from "./styles";
 
-interface TextInputProps {
+interface TextInputProps extends RNTextInputProps {
   style?: StyleProp<ViewStyle>;
   title?: string;
 }
@@ -24,7 +24,7 @@ export function TextInput({ style, title, ...props }: TextInputProps) {
   return (
     <View style={style}>
       {!!title && <Text style={styles.title}>{title}</Text>}
-      <TextInputRN
+      <RNTextInput
         style={styles.textInput}
         placeholderTextColor={colors.textInputPlaceholder}
         {...props}
