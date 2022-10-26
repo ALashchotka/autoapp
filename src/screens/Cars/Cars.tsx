@@ -1,16 +1,10 @@
 import React from "react";
 
-import {
-  ActivityIndicator,
-  FlatList,
-  SafeAreaView,
-  Text,
-  View,
-} from "react-native";
+import { ActivityIndicator, FlatList, SafeAreaView, View } from "react-native";
 
 import { useTheme } from "../../hooks/useTheme";
 import { CarItem } from "./CarItem/CarItem";
-import { Settings } from "./Settings/Settings";
+import { ListHeader } from "./ListHeader/ListHeader";
 import useStyles from "./styles";
 import { Car } from "./Types";
 import { useCars } from "./useCars";
@@ -21,7 +15,7 @@ export function Cars({ route }: { route: any }) {
 
   const carData = route.params;
 
-  const { cars, settings, setSettings, toggleVisibility } = useCars(carData);
+  const { cars, toggleVisibility } = useCars(carData);
 
   const keyExtractor = (item: Car) => `car_${item.id}`;
 
@@ -42,23 +36,7 @@ export function Cars({ route }: { route: any }) {
           keyExtractor={keyExtractor}
           data={cars}
           renderItem={renderItem}
-          ListHeaderComponent={
-            <>
-              <Settings settings={settings} setSettings={setSettings} />
-
-              <View style={styles.titleContainer}>
-                <Text style={styles.title}>Всего: {cars.length}</Text>
-                <Text style={styles.title}>
-                  Продано:{" "}
-                  {
-                    cars.filter(
-                      ({ isDeleted }: { isDeleted: boolean }) => isDeleted
-                    ).length
-                  }
-                </Text>
-              </View>
-            </>
-          }
+          ListHeaderComponent={<ListHeader cars={cars} />}
         />
       )}
 

@@ -91,7 +91,7 @@ export function Search({ navigation }: { navigation: any }) {
           <>
             <Text style={styles.title}>Не работает с:</Text>
             <Text style={[styles.value, { marginBottom: 0 }]}>
-              - Alfa Romeo, Land Rover, Volvo
+              - Alfa Romeo, Land Rover, Mercedes, Volvo
             </Text>
           </>
         )}
