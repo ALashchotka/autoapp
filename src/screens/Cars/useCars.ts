@@ -27,6 +27,22 @@ const formatModel = (model: string) => {
 export function useCars(carData: CarData) {
   const [cars, setCars] = useState<Car[] | null>(null);
 
+  const [filters, setFilters] = useState({
+    bodyTypes: carData.body ? [BODY[carData.body]] : undefined,
+    brand: BRANDS[carData.brand] || carData.brand.toLowerCase(),
+    capacityFrom: carData.capacity
+      ? (carData.capacity / 1000).toFixed(1)
+      : undefined,
+    capacityTo: carData.capacity
+      ? (carData.capacity / 1000).toFixed(1)
+      : undefined,
+    engines: carData.fuel ? [FUEL[carData.fuel]] : undefined,
+    modelId: carData.brand.toLowerCase() + formatModel(carData.model),
+    issueYearFrom: carData.date - 1,
+    issueYearTo: carData.date + 1,
+    period: 7,
+  });
+
   const toggleVisibility = (item: Car) => {
     setCars(
       (prevState: Car[] | null) =>
@@ -37,33 +53,16 @@ export function useCars(carData: CarData) {
   };
 
   useEffect(() => {
-    if (carData) {
+    if (filters) {
       setCars(null);
 
       const sendRequest = async () => {
         const body: SearchParams = {
-          brand: BRANDS[carData.brand] || carData.brand.toLowerCase(),
-          modelId: carData.brand.toLowerCase() + formatModel(carData.model),
-          issueYearFrom: carData.date - 1,
-          issueYearTo: carData.date + 1,
-          period: 7,
+          ...filters,
           deleted: true,
           sorting: 2,
           page: 0,
         };
-
-        if (carData.capacity) {
-          body.capacityFrom = (carData.capacity / 1000).toFixed(1);
-          body.capacityTo = (carData.capacity / 1000).toFixed(1);
-        }
-
-        if (carData.fuel) {
-          body.engines = [FUEL[carData.fuel]];
-        }
-
-        if (carData.body) {
-          body.bodyTypes = [BODY[carData.body]];
-        }
 
         const response = await axios({
           method: "post",
@@ -81,7 +80,7 @@ export function useCars(carData: CarData) {
 
       sendRequest();
     }
-  }, [carData]);
+  }, [filters]);
 
   return { cars, toggleVisibility };
 }

@@ -5,6 +5,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import { useTheme } from "../hooks/useTheme";
 import { Calculator } from "../screens/Calculator/Calculator";
 import { Cars } from "../screens/Cars/Cars";
+import { Filters } from "../screens/Filters/Filters";
 import { Search } from "../screens/Search/Search";
 
 const Tab = createBottomTabNavigator();
@@ -24,6 +25,11 @@ function SearchNavigation() {
         name="Cars"
         component={Cars}
         options={{ headerTitle: "Машины в продаже" }}
+      />
+      <SearchStack.Screen
+        name="Filters"
+        component={Filters}
+        options={{ headerTitle: "Фильтры" }}
       />
     </SearchStack.Navigator>
   );

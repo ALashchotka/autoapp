@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-import { ActivityIndicator, FlatList, SafeAreaView, View } from "react-native";
+import {
+  ActivityIndicator,
+  FlatList,
+  SafeAreaView,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { useTheme } from "../../hooks/useTheme";
 import { CarItem } from "./CarItem/CarItem";
@@ -9,7 +16,7 @@ import useStyles from "./styles";
 import { Car } from "./Types";
 import { useCars } from "./useCars";
 
-export function Cars({ route }: { route: any }) {
+export function Cars({ navigation, route }: { navigation: any; route: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
@@ -28,6 +35,23 @@ export function Cars({ route }: { route: any }) {
       />
     );
   };
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Filters")}
+          hitSlop={{ top: 10, right: 10, bottom: 10, left: 10 }}
+        >
+          <MaterialCommunityIcons
+            name="filter"
+            color={colors.primary}
+            size={24}
+          />
+        </TouchableOpacity>
+      ),
+    });
+  }, [navigation]);
 
   return (
     <SafeAreaView style={styles.container}>
