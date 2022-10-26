@@ -1,0 +1,47 @@
+import { StyleSheet } from "react-native";
+
+export default ({ colors }: { colors: any }) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: colors.screenBackground,
+    },
+    title: {
+      marginHorizontal: 24,
+      marginTop: 16,
+      fontSize: 16,
+      fontWeight: "500",
+      color: colors.text,
+    },
+    itemsContainer: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      marginHorizontal: 16,
+    },
+    itemContainer: {
+      marginHorizontal: 8,
+      marginVertical: 16,
+      backgroundColor: colors.selectableItemBackground,
+      borderRadius: 10,
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+    },
+    itemSelected: {
+      backgroundColor: colors.selectableItemSelectedBackground,
+    },
+    itemText: {
+      color: colors.selectableItemText,
+    },
+    itemTextSelected: {
+      color: colors.selectableItemSelectedText,
+    },
+    textInput: {
+      backgroundColor: colors.textInputBackground,
+      color: colors.textInputText,
+      marginVertical: 16,
+      marginHorizontal: 24,
+      borderRadius: 10,
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+    },
+  });

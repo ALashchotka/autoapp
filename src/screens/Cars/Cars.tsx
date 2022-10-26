@@ -4,7 +4,6 @@ import {
   ActivityIndicator,
   FlatList,
   SafeAreaView,
-  StyleSheet,
   Text,
   View,
 } from "react-native";
@@ -12,33 +11,9 @@ import {
 import { useTheme } from "../../hooks/useTheme";
 import { CarItem } from "./CarItem/CarItem";
 import { Settings } from "./Settings/Settings";
+import useStyles from "./styles";
 import { Car } from "./Types";
 import { useCars } from "./useCars";
-
-const useStyles = ({ colors }: { colors: any }) =>
-  StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: colors.screenBackground,
-    },
-    titleContainer: {
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "space-between",
-      margin: 16,
-    },
-    title: {
-      fontSize: 18,
-      fontWeight: "500",
-      textAlign: "center",
-      margin: 8,
-    },
-    emptyContainer: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "center",
-    },
-  });
 
 export function Cars({ route }: { route: any }) {
   const { colors } = useTheme();

@@ -1,16 +1,9 @@
 import React from "react";
 
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 
 import { TextInput } from "../../../components";
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-});
+import styles from "./styles";
 
 export function Settings({
   settings,
