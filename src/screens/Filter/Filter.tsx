@@ -37,6 +37,7 @@ export function Filter({ navigation }: { navigation: any }) {
 
         <View style={styles.textInputContainer}>
           <TextInput
+            autoFocus
             style={styles.textInput}
             placeholder="Ссылка"
             placeholderTextColor={colors.textInputPlaceholder}
