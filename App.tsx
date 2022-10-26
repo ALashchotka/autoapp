@@ -12,6 +12,7 @@ import React from "react";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "react-native";
+import codePush from "react-native-code-push";
 
 import { useTheme } from "./src/hooks/useTheme";
 import { TabNavigation } from "./src/navigation/TabNavigation";
@@ -27,4 +28,16 @@ const App = () => {
   );
 };
 
-export default App;
+export default codePush({
+  installMode: codePush.InstallMode.IMMEDIATE,
+  updateDialog: {
+    appendReleaseDescription: true,
+    descriptionPrefix: " Описание: ",
+    mandatoryContinueButtonLabel: "Продолжить",
+    mandatoryUpdateMessage: "Доступно обновление, обязательное для установки",
+    optionalIgnoreButtonLabel: "Пропустить",
+    optionalInstallButtonLabel: "Установить",
+    optionalUpdateMessage: "Доступно обновление, хотите установить?",
+    title: "Доступно обновление",
+  },
+})(App);
