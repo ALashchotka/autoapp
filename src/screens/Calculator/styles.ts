@@ -6,6 +6,9 @@ export default ({ colors }: { colors: any }) =>
       flex: 1,
       backgroundColor: colors.screenBackground,
     },
+    trashButton: {
+      marginRight: 16,
+    },
     title: {
       marginHorizontal: 24,
       marginTop: 16,

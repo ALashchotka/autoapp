@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { useTheme } from "../../hooks/useTheme";
 import { getTotalPrice } from "../../utils/getTotalPrice";
@@ -21,17 +22,19 @@ import {
 } from "./constants";
 import useStyles from "./styles";
 
+const INITIAL_DATA = {
+  additionalCosts: ADDITIONAL_COSTS_DEFAULT,
+  capacity: "",
+  price: "",
+  unclePrice: UNCLE_PRICE_DEFAULT,
+  year: DATES_DEFAULT.value,
+};
+
 export function Calculator({ navigation }: { navigation: any }) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
-  const [data, setData] = useState({
-    additionalCosts: ADDITIONAL_COSTS_DEFAULT,
-    capacity: "",
-    price: "",
-    unclePrice: UNCLE_PRICE_DEFAULT,
-    year: DATES_DEFAULT.value,
-  });
+  const [data, setData] = useState({ ...INITIAL_DATA });
 
   const totalPrice = getTotalPrice(data);
 
@@ -52,7 +55,25 @@ export function Calculator({ navigation }: { navigation: any }) {
 
   useEffect(() => {
     navigation.setOptions({ title: `Итого: ~${totalPrice}$` });
-  }, [totalPrice]);
+  }, [navigation, totalPrice]);
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <TouchableOpacity
+          style={styles.trashButton}
+          onPress={() => setData(INITIAL_DATA)}
+          hitSlop={{ top: 10, right: 10, bottom: 10, left: 10 }}
+        >
+          <MaterialCommunityIcons
+            name="trash-can-outline"
+            color={colors.primary}
+            size={24}
+          />
+        </TouchableOpacity>
+      ),
+    });
+  }, [navigation]);
 
   return (
     <SafeAreaView style={styles.container}>
