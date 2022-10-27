@@ -9,16 +9,26 @@ export default ({ colors }: { colors: Record<ColorID, string> }) =>
       backgroundColor: colors.screenBackground,
     },
 
+    filtersRowContainer: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
     filterContainer: {
-      margin: 16,
+      marginVertical: 16,
+      marginHorizontal: 8,
     },
     title: {
       fontSize: 16,
       fontWeight: "500",
       color: colors.text,
+      marginHorizontal: 8,
     },
     itemsContainer: {
       flexDirection: "row",
+    },
+    input: {
+      marginHorizontal: 8,
     },
     itemContainer: {
       marginHorizontal: 8,

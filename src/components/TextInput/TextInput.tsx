@@ -14,10 +14,16 @@ import useStyles from "./styles";
 
 interface TextInputProps extends RNTextInputProps {
   style?: StyleProp<ViewStyle>;
+  textInputStyle?: StyleProp<ViewStyle>;
   title?: string;
 }
 
-export function TextInput({ style, title, ...props }: TextInputProps) {
+export function TextInput({
+  style,
+  textInputStyle,
+  title,
+  ...props
+}: TextInputProps) {
   const { colors } = useTheme();
   const styles = useStyles({ colors });
 
@@ -25,7 +31,7 @@ export function TextInput({ style, title, ...props }: TextInputProps) {
     <View style={style}>
       {!!title && <Text style={styles.title}>{title}</Text>}
       <RNTextInput
-        style={styles.textInput}
+        style={[styles.textInput, textInputStyle]}
         placeholderTextColor={colors.textInputPlaceholder}
         {...props}
       />

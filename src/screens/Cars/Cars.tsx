@@ -45,7 +45,7 @@ export function Cars({ navigation, route }: { navigation: any; route: any }) {
           hitSlop={{ top: 10, right: 10, bottom: 10, left: 10 }}
         >
           <MaterialCommunityIcons
-            name="filter"
+            name="filter-outline"
             color={colors.primary}
             size={24}
           />
