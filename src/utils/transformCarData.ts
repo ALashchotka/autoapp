@@ -15,6 +15,9 @@ const formatModel = (model: string) => {
       .split("-")
       .map((item) => capitalize(item))
       .join("Minus")
+      .split("+")
+      .map((item) => capitalize(item))
+      .join("Plus")
   );
 };
 
