@@ -1,47 +1,17 @@
 import { useEffect, useState } from "react";
 
+import { useNavigation, useRoute } from "@react-navigation/native";
 import axios from "axios";
 import qs from "qs";
+import { Alert } from "react-native";
 
-import { CarData } from "../Search/Types";
-import { BODY, BRANDS, FUEL, MODELS } from "./constants";
 import { Car, SearchParams } from "./Types";
 
-function capitalize(string: string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
+export function useCars() {
+  const route = useRoute();
+  const navigation = useNavigation();
 
-const formatModel = (model: string) => {
-  return (
-    MODELS[model] ||
-    model
-      .split(" ")
-      .map((item) => capitalize(item.toLowerCase()))
-      .join("")
-      .split("-")
-      .map((item) => capitalize(item))
-      .join("Minus")
-  );
-};
-
-export function useCars(carData: CarData) {
   const [cars, setCars] = useState<Car[] | null>(null);
-
-  const [filters, setFilters] = useState({
-    bodyTypes: carData.body ? [BODY[carData.body]] : undefined,
-    brand: BRANDS[carData.brand] || carData.brand.toLowerCase(),
-    capacityFrom: carData.capacity
-      ? (carData.capacity / 1000).toFixed(1)
-      : undefined,
-    capacityTo: carData.capacity
-      ? (carData.capacity / 1000).toFixed(1)
-      : undefined,
-    engines: carData.fuel ? [FUEL[carData.fuel]] : undefined,
-    modelId: carData.brand.toLowerCase() + formatModel(carData.model),
-    issueYearFrom: carData.date - 1,
-    issueYearTo: carData.date + 1,
-    period: 7,
-  });
 
   const toggleVisibility = (item: Car) => {
     setCars(
@@ -53,34 +23,44 @@ export function useCars(carData: CarData) {
   };
 
   useEffect(() => {
-    if (filters) {
+    if (route) {
       setCars(null);
 
       const sendRequest = async () => {
-        const body: SearchParams = {
-          ...filters,
-          deleted: true,
-          sorting: 2,
-          page: 0,
-        };
+        try {
+          const body: SearchParams = {
+            ...route.params.filters,
+            deleted: true,
+            sorting: 2,
+            page: 0,
+          };
 
-        const response = await axios({
-          method: "post",
-          url: "https://hotcar.by/search",
-          data: qs.stringify(body),
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-          },
-        });
+          const response = await axios({
+            method: "post",
+            url: "https://hotcar.by/search",
+            data: qs.stringify(body),
+            headers: {
+              "Content-Type":
+                "application/x-www-form-urlencoded; charset=UTF-8",
+            },
+          });
 
-        setCars(
-          response.data.map((item: Car) => ({ ...item, isVisible: true }))
-        );
+          setCars(
+            response.data.map((item: Car) => ({ ...item, isVisible: true }))
+          );
+        } catch (error) {
+          Alert.alert(
+            "Ошибка",
+            "Ошибка запроса машин в продаже, попробуйте ещё раз через пару минут"
+          );
+
+          navigation.goBack();
+        }
       };
 
       sendRequest();
     }
-  }, [filters]);
+  }, [route]);
 
   return { cars, toggleVisibility };
 }

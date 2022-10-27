@@ -8,6 +8,9 @@ export default ({ colors }: { colors: Record<ColorID, string> }) =>
       flex: 1,
       backgroundColor: colors.screenBackground,
     },
+    emptyList: {
+      flex: 1,
+    },
     emptyContainer: {
       flex: 1,
       alignItems: "center",

@@ -3,17 +3,16 @@ import React from "react";
 import { Image, Linking, Text, TouchableOpacity, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-import { CarData } from "../../Search/Types";
 import { Car } from "../Types";
 import styles from "./styles";
 
 export function CarItem({
-  carData,
   item,
+  searchedCarPrice,
   toggleVisibility,
 }: {
-  carData: CarData;
   item: Car;
+  searchedCarPrice: number;
   toggleVisibility: (item: Car) => void;
 }) {
   const onLinkPress = () => {
@@ -43,13 +42,11 @@ export function CarItem({
                     styles.diffPrice,
                     {
                       color:
-                        item.priceUSD - carData.totalPrice > 0
-                          ? "green"
-                          : "red",
+                        item.priceUSD - searchedCarPrice > 0 ? "green" : "red",
                     },
                   ]}
                 >
-                  &nbsp;({item.priceUSD - carData.totalPrice}$)
+                  &nbsp;({item.priceUSD - searchedCarPrice}$)
                 </Text>
               </Text>
             </View>

@@ -10,6 +10,10 @@ export function ListHeader({ cars }: { cars: Car[] }) {
 
   const soldCarsCount = cars.filter(({ isDeleted }: Car) => isDeleted).length;
 
+  if (!cars.length) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Всего: {cars.length}</Text>

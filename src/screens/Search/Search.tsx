@@ -11,6 +11,7 @@ import {
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { useTheme } from "../../hooks/useTheme";
+import { transformCarData } from "../../utils/transformCarData";
 import { Card } from "./Card/Card";
 import { SiteParser } from "./SiteParser/SiteParser";
 import useStyles from "./styles";
@@ -25,7 +26,10 @@ export function Search({ navigation }: { navigation: any }) {
   const [carData, setCarData] = useState<CarData | null>(null);
 
   const openCarsList = () => {
-    navigation.navigate("Cars", carData);
+    navigation.navigate("Cars", {
+      carData,
+      filters: transformCarData(carData),
+    });
   };
 
   return (

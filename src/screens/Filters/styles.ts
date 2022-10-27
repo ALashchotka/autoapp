@@ -9,53 +9,38 @@ export default ({ colors }: { colors: Record<ColorID, string> }) =>
       backgroundColor: colors.screenBackground,
     },
 
+    filterContainer: {
+      margin: 16,
+    },
     title: {
-      marginHorizontal: 24,
-      marginTop: 16,
       fontSize: 16,
       fontWeight: "500",
       color: colors.text,
     },
-    value: {
-      marginHorizontal: 24,
-      marginTop: 8,
-      marginBottom: 16,
-      fontSize: 14,
-      fontWeight: "400",
-      color: colors.text,
+    itemsContainer: {
+      flexDirection: "row",
     },
-
-    textInputContainer: {
-      justifyContent: "center",
-    },
-    textInput: {
-      backgroundColor: colors.textInputBackground,
-      color: colors.textInputText,
+    itemContainer: {
+      marginHorizontal: 8,
       marginVertical: 16,
-      marginHorizontal: 24,
+      backgroundColor: colors.selectableItemBackground,
       borderRadius: 10,
       paddingVertical: 8,
       paddingHorizontal: 16,
     },
-    textInputClearButton: {
-      position: "absolute",
-      right: 32,
+    itemContainerSelected: {
+      backgroundColor: colors.selectableItemSelectedBackground,
     },
-
-    dataContainer: {
-      flexDirection: "row",
-      flexWrap: "wrap",
-      justifyContent: "space-between",
-      marginHorizontal: 24,
+    itemText: {
+      color: colors.selectableItemText,
     },
-    dataItemContainer: {
-      backgroundColor: colors.selectableItemBackground,
-      borderRadius: 10,
-      width: "45%",
-      marginVertical: 8,
+    itemTextSelected: {
+      color: colors.selectableItemSelectedText,
     },
 
     button: {
+      position: "absolute",
+      bottom: 16,
       alignSelf: "center",
       backgroundColor: colors.buttonBackground,
       marginHorizontal: 8,
