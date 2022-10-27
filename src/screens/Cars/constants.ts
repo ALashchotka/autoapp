@@ -16,9 +16,9 @@ export const BRANDS: Record<string, string> = {
 };
 
 export const FUEL: Record<string, string> = {
-  Бензин: "benzin",
-  "Бензин / газ": "benzin",
-  "Бензин / электричество": "benzin",
+  Бензин: "petrol",
+  "Бензин / газ": "petrol",
+  "Бензин / электричество": "petrol",
   Дизель: "diesel",
   "Дизель / электричество": "diesel",
 };
