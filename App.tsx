@@ -32,7 +32,7 @@ export default codePush({
   installMode: codePush.InstallMode.IMMEDIATE,
   updateDialog: {
     appendReleaseDescription: true,
-    descriptionPrefix: " Описание: ",
+    descriptionPrefix: "\nОписание изменений: ",
     mandatoryContinueButtonLabel: "Продолжить",
     mandatoryUpdateMessage: "Доступно обновление, обязательное для установки",
     optionalIgnoreButtonLabel: "Пропустить",
