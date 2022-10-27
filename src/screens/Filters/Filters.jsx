@@ -10,6 +10,7 @@ import {
 } from "react-native";
 
 import { useTheme } from "../../hooks/useTheme";
+import { BODY } from "../Cars/constants";
 import { PERIODS } from "./constants";
 import useStyles from "./styles";
 
@@ -21,10 +22,19 @@ export function Filters({ navigation, route }) {
 
   const isSubmitButtonVisible = !isEqual(filters, route.params.filters);
 
+  const searchedCarData = route.params.carData;
+
   const changePeriod = (period) => {
     setFilters((prevState) => ({
       ...prevState,
       period,
+    }));
+  };
+
+  const setBodyType = (bodyType) => {
+    setFilters((prevState) => ({
+      ...prevState,
+      bodyTypes: bodyType ? [bodyType] : undefined,
     }));
   };
 
@@ -73,7 +83,7 @@ export function Filters({ navigation, route }) {
           </View>
         </View>
 
-        {/* <View style={styles.filterContainer}>
+        <View style={styles.filterContainer}>
           <Text style={styles.title}>Кузов:</Text>
 
           <View style={styles.itemsContainer}>
@@ -83,7 +93,7 @@ export function Filters({ navigation, route }) {
                 styles.itemContainer,
                 !filters.bodyTypes && styles.itemContainerSelected,
               ]}
-              onPress={doNothing}
+              onPress={() => setBodyType(null)}
             >
               <Text
                 style={[
@@ -101,7 +111,7 @@ export function Filters({ navigation, route }) {
                 styles.itemContainer,
                 !!filters.bodyTypes && styles.itemContainerSelected,
               ]}
-              onPress={doNothing}
+              onPress={() => setBodyType(BODY[searchedCarData.body])}
             >
               <Text
                 style={[
@@ -109,11 +119,11 @@ export function Filters({ navigation, route }) {
                   !!filters.bodyTypes && styles.itemTextSelected,
                 ]}
               >
-                Внедорожник
+                {searchedCarData.body}
               </Text>
             </TouchableOpacity>
           </View>
-        </View> */}
+        </View>
 
         {/* <View style={styles.filterContainer}>
           <Text style={styles.title}>Объём:</Text>
