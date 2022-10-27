@@ -31,7 +31,7 @@
 				<key>bundle-identifier</key>
 				<string>com.autotrader.autoapp</string>
 				<key>bundle-version</key>
-				<string>0.0.2</string>
+				<string>0.0.3</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>platform-identifier</key>
@@ -47,174 +47,460 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-046D9A38-C609-4DED-A2FD-116524C3E016.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-FBFE58FA-2996-4B61-8037-A96022665C44.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,6</string>
+							<string>iPad13,11</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone12,3</string>
+							<string>iPad13,9</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone9,4</string>
+							<string>iPad13,2</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,2</string>
+							<string>iPad13,6</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone11,2</string>
+							<string>iPad6,3</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,6</string>
+							<string>iPad13,9</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone11,4</string>
+							<string>iPad8,3</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,3</string>
+							<string>iPad8,4</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone13,4</string>
+							<string>iPad7,3</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone12,3</string>
+							<string>iPad8,7</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone13,3</string>
+							<string>iPad8,10</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone12,5</string>
+							<string>iPad7,1</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone11,2</string>
+							<string>iPad13,6</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone9,2</string>
+							<string>iPad8,2</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,5</string>
+							<string>iPad13,17</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone11,6</string>
+							<string>iPad6,3</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone11,4</string>
+							<string>iPad8,6</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,5</string>
+							<string>iPad14,2</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone11,6</string>
+							<string>iPad14,1</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone13,1</string>
+							<string>iPad13,7</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone12,5</string>
+							<string>iPad8,7</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,2</string>
+							<string>iPad8,2</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,3</string>
+							<string>iPad8,1</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone13,2</string>
+							<string>iPad8,5</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone9,2</string>
+							<string>iPad8,6</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone9,4</string>
+							<string>iPad8,12</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,1</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,12</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,11</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,2</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,16</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,3</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,17</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,4</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,1</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,3</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,3</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,8</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,9</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,10</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,16</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,4</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,3</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,10</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,11</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,2</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,10</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,1</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,8</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,1</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,5</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,11</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,1</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>MacFamily20,1</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,5</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,1</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,8</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>MacFamily20,1</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,8</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,9</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad14,1</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,4</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad14,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,7</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,4</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,5</string>
+							<key>os-version</key>
+							<string>15.0</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
 					<array>
-						<string>iPhone13,2</string>
-						<string>iPhone13,3</string>
-						<string>iPhone13,1</string>
-						<string>iPhone12,5</string>
-						<string>iPhone13,4</string>
-						<string>iPhone12,3</string>
+						<string>iPad14,2</string>
+						<string>iPad13,17</string>
+						<string>iPad14,1</string>
+						<string>iPad13,16</string>
 					</array>
 				</dict>
 				<dict>
@@ -223,73 +509,291 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-3D5A7A49-92B5-4B7E-81B7-FDFF84ADBE07.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-0D3931C2-01E8-42D5-B5E5-C540A27E340C.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
-							<string>iPhone9,3</string>
+							<string>iPad6,11</string>
 							<key>os-version</key>
-							<string>15.0</string>
+							<string>13.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,1</string>
+							<string>iPad7,11</string>
 							<key>os-version</key>
-							<string>16.0</string>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,7</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,7</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,4</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,1</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,11</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,12</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,6</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,12</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,1</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,4</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,8</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,6</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,5</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,12</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,2</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,3</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,7</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,3</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,8</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,12</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,2</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,11</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,6</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,5</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+					</array>
+					<key>variantIds</key>
+					<array>
+						<string>iPad11,7</string>
+						<string>iPad11,6</string>
+						<string>iPad7,12</string>
+						<string>iPad7,11</string>
+					</array>
+				</dict>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.autotrader.autoapp</string>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-3ADCE20F-94EF-4D6E-95F4-3BA28133C630.ipa</string>
+					<key>variantDescriptors</key>
+					<array>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,4</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,5</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,6</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,6</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,2</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,2</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,4</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,2</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,3</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+					</array>
+					<key>variantIds</key>
+					<array>
+						<string>iPhone11,6</string>
+						<string>iPhone10,2</string>
+						<string>iPhone11,4</string>
+						<string>iPhone10,6</string>
+						<string>iPhone10,5</string>
+						<string>iPhone11,2</string>
+						<string>iPhone9,4</string>
+						<string>iPhone9,2</string>
+						<string>iPhone10,3</string>
+					</array>
+				</dict>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.autotrader.autoapp</string>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-7C2886AD-4636-4140-AD43-97003A995FD0.ipa</string>
+					<key>variantDescriptors</key>
+					<array>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,4</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,3</string>
+							<key>os-version</key>
+							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPhone9,1</string>
 							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,6</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone12,8</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,6</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone12,8</string>
-							<key>os-version</key>
-							<string>16.0</string>
+							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPhone10,1</string>
 							<key>os-version</key>
-							<string>15.0</string>
+							<string>12.2</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
 					<array>
-						<string>iPhone14,6</string>
+						<string>iPhone10,1</string>
+						<string>iPhone9,1</string>
+						<string>iPhone10,4</string>
+						<string>iPhone9,3</string>
 					</array>
 				</dict>
 				<dict>
@@ -298,27 +802,24 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-47E3ED29-59C4-44DD-B829-598EC5AA4B8A.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-50D1CA81-5DF0-47C5-B759-E0FC00D4D761.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
 							<string>iPhone8,2</string>
 							<key>os-version</key>
-							<string>12.2</string>
+							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone7,1</string>
+							<string>iPhone8,2</string>
 							<key>os-version</key>
-							<string>12.2</string>
+							<string>13.0</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
-					<array>
-						<string>iPhone8,2</string>
-						<string>iPhone7,1</string>
-					</array>
+					<array/>
 				</dict>
 				<dict>
 					<key>bundle-identifier</key>
@@ -326,30 +827,24 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-8AFBC558-4258-47B6-A510-C5E8890A223F.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-E37CAAB2-4664-4885-A391-FA0F24EFD3E3.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
 							<string>iPad7,4</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,8</string>
+							<string>iPad11,1</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,6</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,4</string>
+							<string>iPad8,9</string>
 							<key>os-version</key>
 							<string>13.0</string>
 						</dict>
@@ -361,25 +856,19 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad7,3</string>
+							<string>iPad13,1</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,3</string>
+							<string>iPad6,3</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>13.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad13,9</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,5</string>
+							<string>iPad13,6</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
@@ -391,31 +880,7 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad11,4</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,4</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,12</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,2</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,2</string>
+							<string>iPad8,5</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
@@ -427,25 +892,13 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad13,7</string>
+							<string>iPad8,2</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>13.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad13,8</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,1</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,9</string>
+							<string>iPad8,6</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
@@ -469,25 +922,13 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,5</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
 							<string>iPad8,2</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,10</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,4</string>
+							<string>iPad13,4</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
@@ -495,41 +936,47 @@
 							<key>device</key>
 							<string>iPad8,1</string>
 							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,4</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,8</string>
+							<key>os-version</key>
 							<string>13.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad6,3</string>
+							<string>iPad8,8</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad6,3</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,1</string>
+							<string>iPad8,7</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad13,10</string>
+							<string>iPad8,3</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,11</string>
+							<string>iPad7,1</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad7,4</string>
+							<string>iPad13,9</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
@@ -541,97 +988,19 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,9</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,3</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,1</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,6</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,7</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,2</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,7</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,5</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,1</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,8</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,4</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,1</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
 							<string>iPad8,10</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,4</string>
+							<string>iPad13,7</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,11</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,4</string>
+							<string>iPad7,4</string>
 							<key>os-version</key>
 							<string>13.0</string>
 						</dict>
@@ -643,7 +1012,73 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad7,1</string>
+							<string>iPad11,4</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,11</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,4</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,2</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,10</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,12</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,6</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,3</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,1</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,4</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,10</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,3</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
@@ -655,9 +1090,75 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,6</string>
+							<string>iPad8,4</string>
 							<key>os-version</key>
 							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,2</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,7</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,5</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,9</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,3</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,11</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,1</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,4</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,5</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad13,8</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,1</string>
+							<key>os-version</key>
+							<string>13.0</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
@@ -685,172 +1186,44 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-C4FA24AC-D313-41FF-9B16-DF728A0B07D3.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-763D045F-7093-413F-B305-BB3EB5F73DE0.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
-							<string>iPad7,11</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,5</string>
+							<string>iPod9,1</string>
 							<key>os-version</key>
 							<string>13.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad6,7</string>
+							<string>iPod9,1</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
+					</array>
+					<key>variantIds</key>
+					<array/>
+				</dict>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.autotrader.autoapp</string>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-067EC28A-6D4A-48EF-B758-94E3DE088FF0.ipa</string>
+					<key>variantDescriptors</key>
+					<array>
 						<dict>
 							<key>device</key>
-							<string>iPad11,6</string>
+							<string>iPhone11,8</string>
 							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,1</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,4</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,4</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,2</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,11</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,6</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,12</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,12</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,1</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,2</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,7</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,3</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,8</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,6</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,8</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,3</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,11</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,5</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,11</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,12</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,7</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,12</string>
-							<key>os-version</key>
-							<string>13.0</string>
+							<string>12.2</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
 					<array>
-						<string>iPad11,7</string>
-						<string>iPad11,6</string>
-						<string>iPad7,12</string>
-						<string>iPad7,11</string>
+						<string>iPhone11,8</string>
 					</array>
 				</dict>
 				<dict>
@@ -859,23 +1232,23 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-C76DDAA9-0C83-43BF-83F8-915B121A7AE8.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-2427BEE7-EEFC-4A14-A29E-FCF8531DFE20.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
+							<string>iPhone12,1</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
 							<string>iPhone11,8</string>
 							<key>os-version</key>
 							<string>13.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone12,1</string>
-							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
 							<string>iPhone11,8</string>
 							<key>os-version</key>
 							<string>14.0</string>
@@ -884,7 +1257,7 @@
 							<key>device</key>
 							<string>iPhone12,1</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>14.0</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
@@ -898,73 +1271,98 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-B3DBEB5A-A303-4B91-A0D8-2905BDC66CD1.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-29485D30-54FD-4B7A-91E3-94933C41113F.ipa</string>
+					<key>variantDescriptors</key>
+					<array>
+						<dict>
+							<key>device</key>
+							<string>iPhone8,1</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone8,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+					</array>
+					<key>variantIds</key>
+					<array/>
+				</dict>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.autotrader.autoapp</string>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-02EE5117-6186-4EF9-9E73-C0D6894351D3.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
 							<string>iPhone9,3</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPhone10,1</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone9,3</string>
+							<string>iPhone14,6</string>
 							<key>os-version</key>
-							<string>14.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,4</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,4</string>
-							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPhone12,8</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPhone10,1</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,6</string>
+							<key>os-version</key>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPhone12,8</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,4</string>
+							<key>os-version</key>
+							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPhone9,1</string>
 							<key>os-version</key>
-							<string>14.0</string>
+							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone9,1</string>
+							<string>iPhone10,4</string>
 							<key>os-version</key>
-							<string>13.0</string>
+							<string>15.0</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
 					<array>
-						<string>iPhone12,8</string>
+						<string>iPhone14,6</string>
 					</array>
 				</dict>
 				<dict>
@@ -973,460 +1371,138 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-15C98623-392E-4D4C-85E4-7569FFDAA33B.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-373A648B-FB5D-4EE3-BC80-D3EFAD7CA5C6.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
-							<string>iPad13,17</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,5</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
 							<string>iPad7,4</string>
 							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,5</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,9</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>MacFamily20,1</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,17</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,1</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad14,1</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,7</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,11</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,8</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,11</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,10</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,5</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,6</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,6</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,10</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,3</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,1</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,12</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,16</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>MacFamily20,1</string>
-							<key>os-version</key>
-							<string>16.0</string>
+							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPad7,1</string>
 							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,11</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad14,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,12</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad14,1</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,5</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,7</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,6</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,9</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad14,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
+							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPad11,1</string>
 							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,7</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,1</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,10</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,1</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,3</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,3</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,6</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,8</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,10</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,1</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,7</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,11</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,9</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,9</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,16</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad13,8</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,1</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
+							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPad8,8</string>
 							<key>os-version</key>
-							<string>16.0</string>
+							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad13,2</string>
+							<string>iPad8,1</string>
 							<key>os-version</key>
-							<string>16.0</string>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,6</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,5</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,4</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,3</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,2</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,4</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,2</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,2</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,3</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,4</string>
+							<key>os-version</key>
+							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPad8,3</string>
 							<key>os-version</key>
-							<string>15.0</string>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad8,7</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,3</string>
+							<key>os-version</key>
+							<string>12.2</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
 					<array>
-						<string>iPad14,2</string>
-						<string>iPad13,17</string>
-						<string>iPad14,1</string>
-						<string>iPad13,16</string>
+						<string>iPad11,4</string>
+						<string>iPad8,1</string>
+						<string>iPad8,6</string>
+						<string>iPad7,4</string>
+						<string>iPad8,3</string>
+						<string>iPad8,8</string>
+						<string>iPad7,1</string>
+						<string>iPad6,4</string>
+						<string>iPad8,5</string>
+						<string>iPad7,3</string>
+						<string>iPad11,1</string>
+						<string>iPad11,2</string>
+						<string>iPad8,2</string>
+						<string>iPad8,7</string>
+						<string>iPad6,3</string>
+						<string>iPad11,3</string>
+						<string>iPad8,4</string>
+						<string>iPad7,2</string>
 					</array>
 				</dict>
 				<dict>
@@ -1435,7 +1511,510 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-5F3F84EA-6193-462B-8D3B-19DE4524560F.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-62C3C059-4C8E-4E74-B5F0-3F9B4A9197B9.ipa</string>
+					<key>variantDescriptors</key>
+					<array>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,8</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,6</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,3</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,7</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone15,3</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,5</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,3</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,5</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,6</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,3</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,5</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,4</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,6</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,6</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,3</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,2</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,2</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,5</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,3</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,5</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,4</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,4</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,1</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,3</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone15,2</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,2</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,2</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,1</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,4</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,3</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,3</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone14,2</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,5</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+					</array>
+					<key>variantIds</key>
+					<array>
+						<string>iPhone14,5</string>
+						<string>iPhone15,2</string>
+						<string>iPhone14,4</string>
+						<string>iPhone14,3</string>
+						<string>iPhone14,2</string>
+						<string>iPhone14,8</string>
+						<string>iPhone14,7</string>
+						<string>iPhone15,3</string>
+					</array>
+				</dict>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.autotrader.autoapp</string>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-9C239946-6A97-4B32-AC17-A6E1CABFADC8.ipa</string>
+					<key>variantDescriptors</key>
+					<array>
+						<dict>
+							<key>device</key>
+							<string>iPod7,1</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPod9,1</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+					</array>
+					<key>variantIds</key>
+					<array>
+						<string>iPod7,1</string>
+						<string>iPod9,1</string>
+					</array>
+				</dict>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.autotrader.autoapp</string>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-2B5E420D-2707-43F5-A7BC-4E8A672F1B66.ipa</string>
+					<key>variantDescriptors</key>
+					<array>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,1</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,8</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,8</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,1</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+					</array>
+					<key>variantIds</key>
+					<array/>
+				</dict>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.autotrader.autoapp</string>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-60B2BBBB-5254-4D57-8B78-352621DC9EEE.ipa</string>
+					<key>variantDescriptors</key>
+					<array>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,4</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,4</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,4</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,3</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,2</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,5</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,3</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,3</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,2</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,5</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,3</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,5</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,4</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,6</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,6</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,2</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,3</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,6</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,2</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone13,1</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone11,2</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,2</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,5</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,6</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,4</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,2</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+					</array>
+					<key>variantIds</key>
+					<array>
+						<string>iPhone13,2</string>
+						<string>iPhone13,3</string>
+						<string>iPhone13,1</string>
+						<string>iPhone12,5</string>
+						<string>iPhone13,4</string>
+						<string>iPhone12,3</string>
+					</array>
+				</dict>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.autotrader.autoapp</string>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-406420E1-8CCE-493B-A01C-EAE0F3C8F368.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -1454,138 +2033,26 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-5666B7C4-6987-4FFD-9EE3-48BCDDA40E44.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-D2FE75F5-05E4-40BE-A6F6-B7B55583EC4C.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
-							<string>iPad7,2</string>
+							<string>iPhone7,1</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad8,5</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,3</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,3</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,4</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,8</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,4</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,4</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,2</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,3</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,1</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,6</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,1</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,2</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,4</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,3</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad8,7</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,1</string>
+							<string>iPhone8,2</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
 					<array>
-						<string>iPad11,4</string>
-						<string>iPad8,1</string>
-						<string>iPad8,6</string>
-						<string>iPad7,4</string>
-						<string>iPad8,3</string>
-						<string>iPad8,8</string>
-						<string>iPad7,1</string>
-						<string>iPad6,4</string>
-						<string>iPad8,5</string>
-						<string>iPad7,3</string>
-						<string>iPad11,1</string>
-						<string>iPad8,2</string>
-						<string>iPad11,2</string>
-						<string>iPad8,7</string>
-						<string>iPad6,3</string>
-						<string>iPad11,3</string>
-						<string>iPad8,4</string>
-						<string>iPad7,2</string>
+						<string>iPhone8,2</string>
+						<string>iPhone7,1</string>
 					</array>
 				</dict>
 				<dict>
@@ -1594,74 +2061,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-3D4A0F3D-F7D5-4612-88A8-7EFCDB7954FF.ipa</string>
-					<key>variantDescriptors</key>
-					<array>
-						<dict>
-							<key>device</key>
-							<string>iPhone9,1</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,1</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,4</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone9,3</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-					</array>
-					<key>variantIds</key>
-					<array>
-						<string>iPhone10,1</string>
-						<string>iPhone9,1</string>
-						<string>iPhone10,4</string>
-						<string>iPhone9,3</string>
-					</array>
-				</dict>
-				<dict>
-					<key>bundle-identifier</key>
-					<string>com.autotrader.autoapp</string>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-91420128-F48F-4865-A878-AE31CA710B41.ipa</string>
-					<key>variantDescriptors</key>
-					<array>
-						<dict>
-							<key>device</key>
-							<string>iPhone8,1</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone8,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-					</array>
-					<key>variantIds</key>
-					<array/>
-				</dict>
-				<dict>
-					<key>bundle-identifier</key>
-					<string>com.autotrader.autoapp</string>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-62291A64-947C-4127-B5C1-02AB04A3DADD.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-09FAD3EC-5A98-4071-98C4-679E2127CB15.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -1680,49 +2080,12 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-D30B3F29-27AE-474D-9D30-AEF62F4422ED.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-612B765D-1760-4716-B2D3-03BF62299D01.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
-							<string>iPhone11,8</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone12,1</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,8</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone12,1</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-					</array>
-					<key>variantIds</key>
-					<array/>
-				</dict>
-				<dict>
-					<key>bundle-identifier</key>
-					<string>com.autotrader.autoapp</string>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-30494311-669A-4B73-AFDC-2744DA56BD0C.ipa</string>
-					<key>variantDescriptors</key>
-					<array>
-						<dict>
-							<key>device</key>
-							<string>iPhone8,1</string>
+							<string>iPhone8,4</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
@@ -1734,7 +2097,7 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone8,4</string>
+							<string>iPhone8,1</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
@@ -1766,9 +2129,27 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-E28BCE38-5B16-42E2-B92B-719CBAEB32D9.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-5BAE732D-1850-4BAE-A930-C42466328E40.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
+						<dict>
+							<key>device</key>
+							<string>iPad6,12</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,11</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad4,5</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPad5,4</string>
@@ -1777,31 +2158,7 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad7,5</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,2</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,7</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad4,2</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad4,8</string>
+							<string>iPad4,3</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
@@ -1819,24 +2176,6 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad7,6</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,3</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad4,5</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
 							<string>iPad4,6</string>
 							<key>os-version</key>
 							<string>12.2</string>
@@ -1849,13 +2188,13 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad4,3</string>
+							<string>iPad4,2</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad4,7</string>
+							<string>iPad4,8</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
@@ -1867,19 +2206,43 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad6,11</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
 							<string>iPad5,1</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad6,12</string>
+							<string>iPad5,2</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad4,7</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad5,3</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,5</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,6</string>
+							<key>os-version</key>
+							<string>12.2</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,7</string>
 							<key>os-version</key>
 							<string>12.2</string>
 						</dict>
@@ -1913,95 +2276,30 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-BBC7D113-8BA3-4EBE-AB2C-131030D5458E.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-3F06C525-638E-422B-BB1E-549095204D05.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
-							<string>iPhone9,2</string>
+							<string>iPhone8,4</string>
 							<key>os-version</key>
-							<string>12.2</string>
+							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,6</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone9,4</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,2</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,5</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,6</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,3</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,2</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,4</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-					</array>
-					<key>variantIds</key>
-					<array>
-						<string>iPhone11,6</string>
-						<string>iPhone10,2</string>
-						<string>iPhone11,4</string>
-						<string>iPhone10,6</string>
-						<string>iPhone10,5</string>
-						<string>iPhone11,2</string>
-						<string>iPhone9,4</string>
-						<string>iPhone9,2</string>
-						<string>iPhone10,3</string>
-					</array>
-				</dict>
-				<dict>
-					<key>bundle-identifier</key>
-					<string>com.autotrader.autoapp</string>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-F046263A-A901-49DA-AF67-4893AA3E62FB.ipa</string>
-					<key>variantDescriptors</key>
-					<array>
-						<dict>
-							<key>device</key>
-							<string>iPod9,1</string>
+							<string>iPhone8,4</string>
 							<key>os-version</key>
 							<string>13.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPod9,1</string>
+							<string>iPhone8,1</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone8,1</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
@@ -2015,9 +2313,27 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-9B2CDA5E-0E1F-41F0-956A-386CA9F3BE7E.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-8CE74F31-A867-4DB7-B41C-215219F85791.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
+						<dict>
+							<key>device</key>
+							<string>iPad5,1</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,6</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,7</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPad5,4</string>
@@ -2026,19 +2342,7 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad7,6</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,12</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad12,1</string>
+							<string>iPad6,7</string>
 							<key>os-version</key>
 							<string>16.0</string>
 						</dict>
@@ -2050,19 +2354,7 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad11,6</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,7</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,8</string>
+							<string>iPad6,12</string>
 							<key>os-version</key>
 							<string>15.0</string>
 						</dict>
@@ -2080,25 +2372,37 @@
 						</dict>
 						<dict>
 							<key>device</key>
+							<string>iPad12,1</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,11</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad12,2</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
 							<string>iPad6,12</string>
 							<key>os-version</key>
 							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad6,7</string>
+							<string>iPad7,6</string>
 							<key>os-version</key>
 							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad11,6</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad11,7</string>
+							<string>iPad7,5</string>
 							<key>os-version</key>
 							<string>16.0</string>
 						</dict>
@@ -2110,31 +2414,13 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad6,11</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,12</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad5,1</string>
+							<string>iPad7,5</string>
 							<key>os-version</key>
 							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
 							<string>iPad6,11</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,11</string>
 							<key>os-version</key>
 							<string>16.0</string>
 						</dict>
@@ -2146,7 +2432,31 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad5,3</string>
+							<string>iPad7,11</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad7,11</string>
+							<key>os-version</key>
+							<string>15.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,8</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad11,7</string>
+							<key>os-version</key>
+							<string>16.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPad6,8</string>
 							<key>os-version</key>
 							<string>15.0</string>
 						</dict>
@@ -2158,33 +2468,21 @@
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad7,5</string>
+							<string>iPad5,3</string>
 							<key>os-version</key>
 							<string>15.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad7,5</string>
+							<string>iPad11,6</string>
 							<key>os-version</key>
 							<string>16.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPad12,2</string>
+							<string>iPad7,12</string>
 							<key>os-version</key>
 							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad6,8</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPad7,11</string>
-							<key>os-version</key>
-							<string>15.0</string>
 						</dict>
 					</array>
 					<key>variantIds</key>
@@ -2199,372 +2497,74 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-4661EFBA-2143-4E18-9F8F-E44FF7DC3032.ipa</string>
+					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-0B4A3EA0-BD4E-41F5-800A-3B0B421E248E.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
 							<key>device</key>
-							<string>iPhone11,8</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-					</array>
-					<key>variantIds</key>
-					<array>
-						<string>iPhone11,8</string>
-					</array>
-				</dict>
-				<dict>
-					<key>bundle-identifier</key>
-					<string>com.autotrader.autoapp</string>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-D06346DA-4E2D-43E1-8098-E36D62F61A08.ipa</string>
-					<key>variantDescriptors</key>
-					<array>
-						<dict>
-							<key>device</key>
-							<string>iPhone8,2</string>
+							<string>iPhone9,3</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone8,2</string>
+							<string>iPhone10,1</string>
 							<key>os-version</key>
 							<string>13.0</string>
 						</dict>
-					</array>
-					<key>variantIds</key>
-					<array/>
-				</dict>
-				<dict>
-					<key>bundle-identifier</key>
-					<string>com.autotrader.autoapp</string>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-B9F525B0-420B-4980-B0FB-77F54423CBD0.ipa</string>
-					<key>variantDescriptors</key>
-					<array>
 						<dict>
 							<key>device</key>
-							<string>iPhone10,6</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone13,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,6</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone13,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,5</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone12,5</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone15,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,3</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone13,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone12,3</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone9,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,7</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone13,1</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,6</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,6</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,5</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone13,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,4</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone15,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,5</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,8</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone12,5</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone11,2</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone13,3</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone12,3</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,3</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone9,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone13,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone10,2</string>
-							<key>os-version</key>
-							<string>15.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,4</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone14,5</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone13,1</string>
-							<key>os-version</key>
-							<string>16.0</string>
-						</dict>
-					</array>
-					<key>variantIds</key>
-					<array>
-						<string>iPhone14,5</string>
-						<string>iPhone15,2</string>
-						<string>iPhone14,4</string>
-						<string>iPhone14,3</string>
-						<string>iPhone14,2</string>
-						<string>iPhone14,8</string>
-						<string>iPhone14,7</string>
-						<string>iPhone15,3</string>
-					</array>
-				</dict>
-				<dict>
-					<key>bundle-identifier</key>
-					<string>com.autotrader.autoapp</string>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-B815BADA-E614-46A2-A1E9-69260B5FE19F.ipa</string>
-					<key>variantDescriptors</key>
-					<array>
-						<dict>
-							<key>device</key>
-							<string>iPod9,1</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPod7,1</string>
-							<key>os-version</key>
-							<string>12.2</string>
-						</dict>
-					</array>
-					<key>variantIds</key>
-					<array>
-						<string>iPod7,1</string>
-						<string>iPod9,1</string>
-					</array>
-				</dict>
-				<dict>
-					<key>bundle-identifier</key>
-					<string>com.autotrader.autoapp</string>
-					<key>kind</key>
-					<string>software-package</string>
-					<key>url</key>
-					<string>https://alashchotka.github.io/autoapp/Apps/autoapp-449E49C1-A599-4D89-8D65-5437679A9F28.ipa</string>
-					<key>variantDescriptors</key>
-					<array>
-						<dict>
-							<key>device</key>
-							<string>iPhone8,1</string>
+							<string>iPhone10,1</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
 						<dict>
 							<key>device</key>
-							<string>iPhone8,1</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone8,4</string>
-							<key>os-version</key>
-							<string>13.0</string>
-						</dict>
-						<dict>
-							<key>device</key>
-							<string>iPhone8,4</string>
+							<string>iPhone9,1</string>
 							<key>os-version</key>
 							<string>14.0</string>
 						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,4</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,8</string>
+							<key>os-version</key>
+							<string>14.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,3</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone10,4</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone9,1</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
+						<dict>
+							<key>device</key>
+							<string>iPhone12,8</string>
+							<key>os-version</key>
+							<string>13.0</string>
+						</dict>
 					</array>
 					<key>variantIds</key>
-					<array/>
+					<array>
+						<string>iPhone12,8</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
