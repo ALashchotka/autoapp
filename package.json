@@ -5,7 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "android-apk": "cd ./android && ./gradlew assembleRelease && cd ..",
-    "codepush": "appcenter codepush release-react -a flatron_vi/AutoApp-iOS -d Production -t $npm_package_version",
+    "codepush": "appcenter codepush release-react -a flatron_vi/AutoApp-iOS -d Production -t $npm_package_version && appcenter codepush release-react -a flatron_vi/AutoApp-Android -d Production -t $npm_package_version",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
