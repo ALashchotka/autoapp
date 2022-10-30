@@ -33,7 +33,7 @@ export function CarItem({
           <View style={styles.content}>
             <View style={styles.titleContainer}>
               <Text style={styles.title}>
-                {item.name}, {item.issueYear}
+                {item.name.split("/")[0]}, {item.issueYear}
               </Text>
               <Text style={styles.price}>
                 {item.priceUSD}$
