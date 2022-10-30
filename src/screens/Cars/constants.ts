@@ -100,6 +100,10 @@ const BMW_MODELS = {
   M550: "5Series",
 };
 
+const LAND_ROVER_MODELS = {
+  Evoque: "RangeRoverEvoque",
+};
+
 const OPEL_MODELS = {
   Astra: "AstraSlashAstraOPC",
   Insignia: "InsigniaSlashInsigniaOPS",
@@ -124,6 +128,7 @@ const RENAULT_MODELS = {
 
 export const MODELS: Record<string, string> = {
   ...BMW_MODELS,
+  ...LAND_ROVER_MODELS,
   ...OPEL_MODELS,
   ...PEUGEOT_MODELS,
   ...RENAULT_MODELS,
