@@ -45,9 +45,9 @@ const INJECTED_JAVASCRIPT = `(function() {
 
       window.ReactNativeWebView.postMessage(JSON.stringify(data));
     } catch (error) {
-      if (increment < 3) {
+      if (increment < 5) {
         increment += 1;
-        setTimeout(() => getData(), 1000);
+        setTimeout(() => getData(), 1500);
       } else {
         window.ReactNativeWebView.postMessage("error");
       }
