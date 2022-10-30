@@ -23,7 +23,7 @@ export const FUEL: Record<string, string> = {
   "Дизель / электричество": "diesel",
 };
 
-const BMW_MODELS = {
+const BMW_MODELS: Record<string, string> = {
   116: "1Series",
   118: "1Series",
   120: "1Series",
@@ -100,11 +100,11 @@ const BMW_MODELS = {
   M550: "5Series",
 };
 
-const LAND_ROVER_MODELS = {
+const LAND_ROVER_MODELS: Record<string, string> = {
   Evoque: "RangeRoverEvoque",
 };
 
-const OPEL_MODELS = {
+const OPEL_MODELS: Record<string, string> = {
   Astra: "AstraSlashAstraOPC",
   Insignia: "InsigniaSlashInsigniaOPS",
   Meriva: "MerivaSlashMerivaOPS",
@@ -114,16 +114,42 @@ const OPEL_MODELS = {
   "Zafira tourer": "ZafiraSlashZafiraOPC",
 };
 
-const PEUGEOT_MODELS = {
+const PEUGEOT_MODELS: Record<string, string> = {
   "205": "205Slash205GTI",
   "208": "208Slash208GTI",
   "308": "308Slash308GTI",
 };
 
-const RENAULT_MODELS = {
+const RENAULT_MODELS: Record<string, string> = {
   Clio: "ClioSlashClioRS",
   Megane: "MeganeSlashMeganeRS",
   Sandero: "SanderoSlashSanderoRS",
+};
+
+const VOLVO_MODELS: Record<string, string> = {
+  C30: "CMinusseries",
+  C303: "CMinusseries",
+  "C40 Recharge": "CMinusseries",
+  C70: "CMinusseries",
+  S40: "SMinusseries",
+  S60: "SMinusseries",
+  "S60 Cross Country": "SMinusseries",
+  S70: "SMinusseries",
+  S80: "SMinusseries",
+  S90: "SMinusseries",
+  V40: "VMinusseries",
+  "V40 Cross Country": "VMinusseries",
+  V50: "VMinusseries",
+  V60: "VMinusseries",
+  "V60 Cross Country": "VMinusseries",
+  V70: "VMinusseries",
+  V80: "VMinusseries",
+  V90: "VMinusseries",
+  "V90 Cross Country": "VMinusseries",
+  XC40: "XCMinusseries",
+  XC60: "XCMinusseries",
+  XC70: "XCMinusseries",
+  XC90: "XCMinusseries",
 };
 
 export const MODELS: Record<string, string> = {
@@ -132,4 +158,5 @@ export const MODELS: Record<string, string> = {
   ...OPEL_MODELS,
   ...PEUGEOT_MODELS,
   ...RENAULT_MODELS,
+  ...VOLVO_MODELS,
 };

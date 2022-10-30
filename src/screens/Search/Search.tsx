@@ -94,9 +94,7 @@ export function Search({ navigation }: { navigation: any }) {
         {!link && (
           <>
             <Text style={styles.title}>Не работает с:</Text>
-            <Text style={[styles.value, { marginBottom: 0 }]}>
-              - Mercedes, Volvo
-            </Text>
+            <Text style={styles.value}>{"- Mercedes\n"}</Text>
           </>
         )}
       </ScrollView>
