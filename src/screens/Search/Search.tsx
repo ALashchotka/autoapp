@@ -70,9 +70,9 @@ export function Search({ navigation }: { navigation: any }) {
           <>
             <View style={styles.dataContainer}>
               <Card title="Марка" value={carData.title} />
+              <Card title="Год выпуска" value={carData.date} />
               <Card title="Тип топлива" value={carData.fuel} />
               <Card title="Объём" value={carData.capacity} />
-              <Card title="Год выпуска" value={carData.date} />
               <Card title="Кузов" value={carData.body} />
               <Card title="Коробка" value={carData.gear} />
               <Card title="Цена" value={carData.price} />
