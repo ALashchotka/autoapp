@@ -102,7 +102,7 @@ export function Filters({ navigation, route }) {
             <View style={styles.itemsContainer}>
               <TextInput
                 textInputStyle={styles.input}
-                placeholder="Год от"
+                placeholder="2014"
                 keyboardType="number-pad"
                 onChangeText={setYearFrom}
                 value={filters.issueYearFrom ? `${filters.issueYearFrom}` : ""}
@@ -116,7 +116,7 @@ export function Filters({ navigation, route }) {
             <View style={styles.itemsContainer}>
               <TextInput
                 textInputStyle={styles.input}
-                placeholder="Год до"
+                placeholder="2016"
                 keyboardType="number-pad"
                 onChangeText={setYearTo}
                 value={filters.issueYearTo ? `${filters.issueYearTo}` : ""}

@@ -43,7 +43,7 @@ export function Search({ navigation }: { navigation: any }) {
           <TextInput
             autoFocus
             style={styles.textInput}
-            placeholder="Ссылка"
+            placeholder="https://ru.autoplius.lt/objavlenija/renault-megane-1-5-l-universal-2018-dizel-22094310.html"
             placeholderTextColor={colors.textInputPlaceholder}
             onChangeText={onLinkChange}
             value={link}

@@ -83,7 +83,7 @@ export function Calculator({ navigation }: { navigation: any }) {
             <Text style={styles.title}>Объём двигателя:</Text>
             <TextInput
               style={styles.textInput}
-              placeholder="прим. 1600"
+              placeholder="1600"
               keyboardType="number-pad"
               onChangeText={onVolumeChange}
               placeholderTextColor={colors.textInputPlaceholder}
@@ -95,7 +95,7 @@ export function Calculator({ navigation }: { navigation: any }) {
             <Text style={styles.title}>Цена автомобиля:</Text>
             <TextInput
               style={styles.textInput}
-              placeholder="прим. 6000"
+              placeholder="6200"
               keyboardType="number-pad"
               onChangeText={onPriceChange}
               placeholderTextColor={colors.textInputPlaceholder}
