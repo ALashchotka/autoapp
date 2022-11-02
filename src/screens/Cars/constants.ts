@@ -23,6 +23,13 @@ export const FUEL: Record<string, string> = {
   "Дизель / электричество": "diesel",
 };
 
+const AUDI_MODELS: Record<string, string> = {
+  "A5 SPORTBACK": "A5",
+  "A7 SPORTBACK": "A7",
+  "Q3 Sportback": "Q3",
+  "Q5 Sportback": "Q5",
+};
+
 const BMW_MODELS: Record<string, string> = {
   116: "1Series",
   118: "1Series",
@@ -105,7 +112,8 @@ const LAND_ROVER_MODELS: Record<string, string> = {
 };
 
 const OPEL_MODELS: Record<string, string> = {
-  Astra: "AstraSlashAstraOPC",
+  Astra: "AstraSlashAstraOPS",
+  Corsa: "CopsaSlashCorsaOPS",
   Insignia: "InsigniaSlashInsigniaOPS",
   Meriva: "MerivaSlashMerivaOPS",
   Vectra: "VectraSlashVectraOPC",
@@ -153,6 +161,7 @@ const VOLVO_MODELS: Record<string, string> = {
 };
 
 export const MODELS: Record<string, string> = {
+  ...AUDI_MODELS,
   ...BMW_MODELS,
   ...LAND_ROVER_MODELS,
   ...OPEL_MODELS,
