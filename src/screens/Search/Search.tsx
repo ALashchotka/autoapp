@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import {
+  ActivityIndicator,
   SafeAreaView,
   ScrollView,
   Text,
@@ -34,6 +35,12 @@ export function Search({ navigation }: { navigation: any }) {
 
   return (
     <SafeAreaView style={styles.container}>
+      {!carData && !!link && (
+        <View style={styles.emptyContainer}>
+          <ActivityIndicator size={24} />
+        </View>
+      )}
+
       <ScrollView>
         <SiteParser link={link} setCarData={setCarData} />
 

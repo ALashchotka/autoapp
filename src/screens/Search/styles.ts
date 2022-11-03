@@ -8,6 +8,11 @@ export default ({ colors }: { colors: Record<ColorID, string> }) =>
       flex: 1,
       backgroundColor: colors.screenBackground,
     },
+    emptyContainer: {
+      ...StyleSheet.absoluteFillObject,
+      alignItems: "center",
+      justifyContent: "center",
+    },
 
     title: {
       marginHorizontal: 24,
