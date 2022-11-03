@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 import { ColorID } from "../../../styles/colors";
 
@@ -7,7 +7,7 @@ export default ({ colors }: { colors: Record<ColorID, string> }) =>
     container: {
       backgroundColor: colors.selectableItemBackground,
       borderRadius: 10,
-      width: "45%",
+      width: Dimensions.get("window").width / 2 - 32,
       marginVertical: 8,
     },
 
