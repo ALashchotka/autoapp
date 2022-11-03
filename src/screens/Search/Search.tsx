@@ -79,7 +79,10 @@ export function Search({ navigation }: { navigation: any }) {
               <Card title="Марка" value={carData.title} />
               <Card title="Год выпуска" value={carData.date} />
               <Card title="Тип топлива" value={carData.fuel} />
-              <Card title="Объём" value={carData.capacity} />
+              <Card
+                title="Объём"
+                value={(carData.capacity / 1000).toFixed(1)}
+              />
               <Card title="Кузов" value={carData.body} />
               <Card title="Коробка" value={carData.gear} />
               <Card title="Цена" value={carData.price} />

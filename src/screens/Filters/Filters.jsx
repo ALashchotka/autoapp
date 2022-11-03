@@ -235,7 +235,7 @@ export function Filters({ navigation, route }) {
                   !!filters.capacityFrom && styles.itemTextSelected,
                 ]}
               >
-                {searchedCarData.capacity}
+                {(searchedCarData.capacity / 1000).toFixed(1)}
               </Text>
             </TouchableOpacity>
           </View>
