@@ -128,7 +128,7 @@ export function Calculator({ navigation }: { navigation: any }) {
           ))}
         </View>
 
-        <Text style={styles.title}>На лапу тёте:</Text>
+        <Text style={styles.title}>Человеку за 50% скидку:</Text>
         <View style={styles.itemsContainer}>
           {UNCLE_PRICE.map((unclePrice) => (
             <TouchableOpacity
