@@ -4,6 +4,7 @@ import { Alert } from "react-native";
 import WebView from "react-native-webview";
 
 import { getTotalPrice } from "../../../utils/getTotalPrice";
+import { BRANDS } from "../../Cars/constants";
 import { CarData } from "../Types";
 
 const INJECTED_JAVASCRIPT = `(function() {
@@ -60,10 +61,21 @@ const INJECTED_JAVASCRIPT = `(function() {
 const parseCarData = (data: string): CarData => {
   const carData = JSON.parse(data);
 
+  const doubleBrandIndex = Object.keys(BRANDS).findIndex((item) =>
+    carData.title.includes(item)
+  );
+
+  const brand =
+    doubleBrandIndex === -1
+      ? carData.title.split(" ")[0]
+      : Object.keys(BRANDS)[doubleBrandIndex];
+
+  const model = carData.title.split(brand)[1].trim();
+
   const parsedCarData = {
     ...carData,
-    brand: carData.title.split(" ")[0],
-    model: carData.title.split(" ")[1],
+    brand,
+    model,
     capacity: parseInt(carData.capacity, 10),
     date: parseInt(carData.date.split("-")[0], 10),
     price: parseInt(carData.price, 10),
@@ -91,7 +103,7 @@ export function SiteParser({
     nativeEvent: { data: string };
   }) => {
     if (data === "error") {
-      Alert.alert("Ошибка", "Не получилось распарсить ссылку");
+      Alert.alert("Ошибка", "Не получилось обработать ссылку");
     } else {
       setCarData(parseCarData(data));
     }
