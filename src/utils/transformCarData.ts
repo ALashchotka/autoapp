@@ -41,5 +41,6 @@ export const transformCarData = (carData: CarData | null) => {
     issueYearTo: carData?.date ? carData.date + 1 : null,
     gearbox: carData?.gear ? GEARBOX[carData.gear] : null,
     period: 7,
+    sorting: 2,
   };
 };

@@ -25,6 +25,13 @@ export function Filters({ navigation, route }) {
 
   const searchedCarData = route.params.carData;
 
+  const changeSorting = (sorting) => {
+    setFilters((prevState) => ({
+      ...prevState,
+      sorting,
+    }));
+  };
+
   const changePeriod = (period) => {
     setFilters((prevState) => ({
       ...prevState,
@@ -102,33 +109,45 @@ export function Filters({ navigation, route }) {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
-        <View style={styles.filtersRowContainer}>
-          <View style={styles.filterContainer}>
-            <Text style={styles.title}>Год от:</Text>
+        <View style={styles.filterContainer}>
+          <Text style={styles.title}>Сортировка:</Text>
 
-            <View style={styles.itemsContainer}>
-              <TextInput
-                textInputStyle={styles.input}
-                placeholder="2014"
-                keyboardType="number-pad"
-                onChangeText={setYearFrom}
-                value={filters.issueYearFrom ? `${filters.issueYearFrom}` : ""}
-              />
-            </View>
-          </View>
+          <View style={styles.itemsContainer}>
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={[
+                styles.itemContainer,
+                filters.sorting === 2 && styles.itemContainerSelected,
+              ]}
+              onPress={() => changeSorting(2)}
+            >
+              <Text
+                style={[
+                  styles.itemText,
+                  filters.sorting === 2 && styles.itemTextSelected,
+                ]}
+              >
+                Сначала дешёвые
+              </Text>
+            </TouchableOpacity>
 
-          <View style={styles.filterContainer}>
-            <Text style={styles.title}>Год до:</Text>
-
-            <View style={styles.itemsContainer}>
-              <TextInput
-                textInputStyle={styles.input}
-                placeholder="2016"
-                keyboardType="number-pad"
-                onChangeText={setYearTo}
-                value={filters.issueYearTo ? `${filters.issueYearTo}` : ""}
-              />
-            </View>
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={[
+                styles.itemContainer,
+                filters.sorting === 0 && styles.itemContainerSelected,
+              ]}
+              onPress={() => changeSorting(0)}
+            >
+              <Text
+                style={[
+                  styles.itemText,
+                  filters.sorting === 0 && styles.itemTextSelected,
+                ]}
+              >
+                Сначала актуальные
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -161,6 +180,36 @@ export function Filters({ navigation, route }) {
                 </TouchableOpacity>
               );
             })}
+          </View>
+        </View>
+
+        <View style={styles.filtersRowContainer}>
+          <View style={styles.filterContainer}>
+            <Text style={styles.title}>Год от:</Text>
+
+            <View style={styles.itemsContainer}>
+              <TextInput
+                textInputStyle={styles.input}
+                placeholder="2014"
+                keyboardType="number-pad"
+                onChangeText={setYearFrom}
+                value={filters.issueYearFrom ? `${filters.issueYearFrom}` : ""}
+              />
+            </View>
+          </View>
+
+          <View style={styles.filterContainer}>
+            <Text style={styles.title}>Год до:</Text>
+
+            <View style={styles.itemsContainer}>
+              <TextInput
+                textInputStyle={styles.input}
+                placeholder="2016"
+                keyboardType="number-pad"
+                onChangeText={setYearTo}
+                value={filters.issueYearTo ? `${filters.issueYearTo}` : ""}
+              />
+            </View>
           </View>
         </View>
 

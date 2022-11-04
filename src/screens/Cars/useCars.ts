@@ -42,7 +42,6 @@ export function useCars() {
           const body: SearchParams = {
             ...route.params.filters,
             deleted: true,
-            sorting: 2,
             page: 0,
           };
 

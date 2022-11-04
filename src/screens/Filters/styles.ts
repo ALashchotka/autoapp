@@ -18,8 +18,8 @@ export default ({ colors }: { colors: Record<ColorID, string> }) =>
       justifyContent: "space-between",
     },
     filterContainer: {
-      marginVertical: 16,
       marginHorizontal: 8,
+      marginVertical: 12,
     },
     title: {
       fontSize: 16,
@@ -35,7 +35,7 @@ export default ({ colors }: { colors: Record<ColorID, string> }) =>
     },
     itemContainer: {
       marginHorizontal: 8,
-      marginVertical: 16,
+      marginVertical: 8,
       backgroundColor: colors.selectableItemBackground,
       borderRadius: 10,
       paddingVertical: 8,
