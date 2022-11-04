@@ -5,7 +5,18 @@ import axios from "axios";
 import qs from "qs";
 import { Alert } from "react-native";
 
+import { CarData } from "../Search/Types";
 import { Car, SearchParams } from "./Types";
+
+const transformCars = (carData: CarData, cars: Car[]) => {
+  if (carData.brand === "Volvo") {
+    return cars.filter(({ link }) =>
+      link.toLowerCase().includes(carData.model.toLowerCase())
+    );
+  }
+
+  return cars;
+};
 
 export function useCars() {
   const route = useRoute();
@@ -46,7 +57,10 @@ export function useCars() {
           });
 
           setCars(
-            response.data.map((item: Car) => ({ ...item, isVisible: true }))
+            transformCars(
+              route.params.carData,
+              response.data.map((item: Car) => ({ ...item, isVisible: true }))
+            )
           );
         } catch (error) {
           Alert.alert(
