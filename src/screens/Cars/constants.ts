@@ -23,6 +23,11 @@ export const FUEL: Record<string, string> = {
   "Дизель / электричество": "diesel",
 };
 
+export const GEARBOX: Record<string, string> = {
+  Автоматическая: "automatic",
+  Механическая: "manual",
+};
+
 const AUDI_MODELS: Record<string, string> = {
   "A5 SPORTBACK": "A5",
   "A7 SPORTBACK": "A7",

@@ -8,6 +8,9 @@ export default ({ colors }: { colors: Record<ColorID, string> }) =>
       flex: 1,
       backgroundColor: colors.screenBackground,
     },
+    content: {
+      paddingBottom: 32 + 16 + 14, // 32 - button bottom * 2, 16 - button padding * 2, 14 - button text size
+    },
 
     filtersRowContainer: {
       flexDirection: "row",

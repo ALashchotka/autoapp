@@ -11,7 +11,7 @@ import {
 
 import { TextInput } from "../../components";
 import { useTheme } from "../../hooks/useTheme";
-import { BODY, FUEL } from "../Cars/constants";
+import { BODY, FUEL, GEARBOX } from "../Cars/constants";
 import { PERIODS } from "./constants";
 import useStyles from "./styles";
 
@@ -70,6 +70,13 @@ export function Filters({ navigation, route }) {
     });
   };
 
+  const setGearBox = (gearbox) => {
+    setFilters((prevState) => ({
+      ...prevState,
+      gearbox: gearbox || undefined,
+    }));
+  };
+
   const setYearFrom = (year) => {
     setFilters((prevState) => ({
       ...prevState,
@@ -94,7 +101,7 @@ export function Filters({ navigation, route }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
+      <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.filtersRowContainer}>
           <View style={styles.filterContainer}>
             <Text style={styles.title}>Год от:</Text>
@@ -305,31 +312,69 @@ export function Filters({ navigation, route }) {
           </View>
         </View>
 
-        {/* <View style={styles.filterContainer}>
-          <Text style={styles.title}>Коробка:</Text>
+        <View style={styles.filterContainer}>
+          <Text style={styles.title}>Коробка передач:</Text>
 
           <View style={styles.itemsContainer}>
             <TouchableOpacity
               activeOpacity={0.5}
-              style={[styles.itemContainer, styles.itemContainerSelected]}
-              onPress={() => {}}
+              style={[
+                styles.itemContainer,
+                !filters.gearbox && styles.itemContainerSelected,
+              ]}
+              onPress={() => setGearBox(null)}
             >
-              <Text style={[styles.itemText, styles.itemTextSelected]}>
+              <Text
+                style={[
+                  styles.itemText,
+                  !filters.gearbox && styles.itemTextSelected,
+                ]}
+              >
+                Не важно
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              activeOpacity={0.5}
+              style={[
+                styles.itemContainer,
+                filters.gearbox === GEARBOX["Автоматическая"] &&
+                  styles.itemContainerSelected,
+              ]}
+              onPress={() => setGearBox(GEARBOX["Автоматическая"])}
+            >
+              <Text
+                style={[
+                  styles.itemText,
+                  filters.gearbox === GEARBOX["Автоматическая"] &&
+                    styles.itemTextSelected,
+                ]}
+              >
                 Автомат
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               activeOpacity={0.5}
-              style={[styles.itemContainer, styles.itemContainerSelected]}
-              onPress={() => {}}
+              style={[
+                styles.itemContainer,
+                filters.gearbox === GEARBOX["Механическая"] &&
+                  styles.itemContainerSelected,
+              ]}
+              onPress={() => setGearBox(GEARBOX["Механическая"])}
             >
-              <Text style={[styles.itemText, styles.itemTextSelected]}>
+              <Text
+                style={[
+                  styles.itemText,
+                  filters.gearbox === GEARBOX["Механическая"] &&
+                    styles.itemTextSelected,
+                ]}
+              >
                 Механика
               </Text>
             </TouchableOpacity>
           </View>
-        </View> */}
+        </View>
       </ScrollView>
 
       {isSubmitButtonVisible && (

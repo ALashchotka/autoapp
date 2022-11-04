@@ -1,4 +1,4 @@
-import { BODY, BRANDS, FUEL, MODELS } from "../screens/Cars/constants";
+import { BODY, BRANDS, FUEL, GEARBOX, MODELS } from "../screens/Cars/constants";
 import { CarData } from "../screens/Search/Types";
 
 function capitalize(string: string) {
@@ -39,6 +39,7 @@ export const transformCarData = (carData: CarData | null) => {
         : null,
     issueYearFrom: carData?.date ? carData.date - 1 : null,
     issueYearTo: carData?.date ? carData.date + 1 : null,
+    gearbox: carData?.gear ? GEARBOX[carData.gear] : null,
     period: 7,
   };
 };
